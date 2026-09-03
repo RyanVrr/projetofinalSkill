@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Colaboradores | SkillMatch</title>
+
+    <!-- Mesmo padrão visual do Dashboard RH -->
+    <link
+        rel="stylesheet"
+        href="css/dashboard-rh.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/colaboradores-rh.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="layout">
+
+
+        <aside class="sidebar">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../logo-skillmatch.png"
+                    alt="SkillMatch"
+                >
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+
+                <a
+                    href="dashboard-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="colaboradores-rh.html"
+                    class="menu-item ativo"
+                >
+
+                    <span class="menu-icone">
+                        ♙
+                    </span>
+
+                    <span>
+                        Colaboradores
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="projetos-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ◫
+                    </span>
+
+                    <span>
+                        Projetos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="matching-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ✦
+                    </span>
+
+                    <span>
+                        Matching
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="relatorios-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ▤
+                    </span>
+
+                    <span>
+                        Relatórios
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="configuracoes-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+        </aside>
+
+
+        <!-- =========================
+             CONTEÚDO
+        ========================== -->
+
+        <main class="conteudo">
+
+
+            <!-- =========================
+                 TOPO
+            ========================== -->
+
+            <header class="topo">
+
+
+                <div class="topo-titulo">
+
+                    <h1>
+                        Colaboradores
+                    </h1>
+
+                    <p>
+                        Gerencie os colaboradores cadastrados.
+                    </p>
+
+                </div>
+
+
+                <div class="usuario-topo">
+
+
+                    <div
+                        class="usuario-avatar"
+                        id="usuario-avatar"
+                    >
+                        RH
+                    </div>
+
+
+                    <div class="usuario-info">
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Recursos Humanos
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =========================
+                 PÁGINA
+            ========================== -->
+
+            <section class="pagina colaboradores-pagina">
+
+
+                <!-- =========================
+                     CABEÇALHO
+                ========================== -->
+
+                <div class="cabecalho-pagina">
+
+
+                    <div>
+
+                        <span class="titulo-menor">
+                            GESTÃO DE EQUIPE
+                        </span>
+
+                        <h2>
+                            Gestão de Colaboradores
+                        </h2>
+
+                        <p>
+                            Consulte, filtre e cadastre funcionários.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="botao-principal"
+                        id="abrir-modal-colaborador"
+                    >
+
+                        <span>
+                            +
+                        </span>
+
+                        Novo colaborador
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- =========================
+                     RESUMO
+                ========================== -->
+
+                <div class="cards-colaboradores">
+
+
+                    <div class="resumo-colaborador">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="total-colaboradores">
+                            0
+                        </strong>
+
+                        <p>
+                            colaboradores
+                        </p>
+
+                    </div>
+
+
+                    <div class="resumo-colaborador">
+
+                        <span>
+                            Ativos
+                        </span>
+
+                        <strong id="total-ativos">
+                            0
+                        </strong>
+
+                        <p>
+                            funcionários ativos
+                        </p>
+
+                    </div>
+
+
+                    <div class="resumo-colaborador">
+
+                        <span>
+                            Inativos
+                        </span>
+
+                        <strong id="total-inativos">
+                            0
+                        </strong>
+
+                        <p>
+                            funcionários inativos
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     PAINEL
+                ========================== -->
+
+                <section class="painel painel-colaboradores">
+
+
+                    <!-- =========================
+                         FILTROS
+                    ========================== -->
+
+                    <div class="barra-filtros">
+
+
+                        <div class="campo-pesquisa">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="text"
+                                id="pesquisa-colaborador"
+                                placeholder="Pesquisar por nome..."
+                            >
+
+                        </div>
+
+
+                        <select id="filtro-setor">
+
+                            <option value="">
+                                Todos os setores
+                            </option>
+
+                        </select>
+
+
+                        <select id="filtro-cargo">
+
+                            <option value="">
+                                Todos os cargos
+                            </option>
+
+                        </select>
+
+
+                        <select id="filtro-status">
+
+                            <option value="">
+                                Todos os status
+                            </option>
+
+                            <option value="true">
+                                Ativos
+                            </option>
+
+                            <option value="false">
+                                Inativos
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                    <!-- =========================
+                         TABELA
+                    ========================== -->
+
+                    <div class="tabela-container">
+
+
+                        <table class="tabela-colaboradores">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Colaborador
+                                    </th>
+
+                                    <th>
+                                        Matrícula
+                                    </th>
+
+                                    <th>
+                                        Cargo
+                                    </th>
+
+                                    <th>
+                                        Setor
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Admissão
+                                    </th>
+
+                                    <th>
+                                        Ações
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="corpo-tabela-colaboradores">
+
+                                <tr>
+
+                                    <td
+                                        colspan="7"
+                                        class="tabela-vazia"
+                                    >
+                                        Carregando colaboradores...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =========================
+         MODAL COLABORADOR
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal-colaborador"
+        hidden
+    >
+
+
+        <div class="modal-fundo"></div>
+
+
+        <div class="modal-conteudo">
+
+
+            <div class="modal-cabecalho">
+
+
+                <div>
+
+                    <h2 id="titulo-modal-colaborador">
+                        Novo colaborador
+                    </h2>
+
+                    <p id="descricao-modal-colaborador">
+                        Cadastre um novo funcionário no SkillMatch.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    id="fechar-modal-colaborador"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+            <form id="form-colaborador">
+
+
+                <input
+                    type="hidden"
+                    id="colaborador-id"
+                >
+
+
+                <div class="grade-formulario">
+
+
+                    <div class="campo campo-grande">
+
+                        <label for="colaborador-nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="colaborador-nome"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="colaborador-matricula">
+                            Matrícula
+                        </label>
+
+                        <input
+                            type="number"
+                            id="colaborador-matricula"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="colaborador-contato">
+                            Contato
+                        </label>
+
+                        <input
+                            type="text"
+                            id="colaborador-contato"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="colaborador-setor">
+                            Setor
+                        </label>
+
+                        <select
+                            id="colaborador-setor"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="colaborador-cargo">
+                            Cargo
+                        </label>
+
+                        <select
+                            id="colaborador-cargo"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="colaborador-admissao">
+                            Data de admissão
+                        </label>
+
+                        <input
+                            type="date"
+                            id="colaborador-admissao"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="colaborador-status">
+                            Status
+                        </label>
+
+                        <select
+                            id="colaborador-status"
+                            required
+                        >
+
+                            <option value="true">
+                                Ativo
+                            </option>
+
+                            <option value="false">
+                                Inativo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DADOS DE LOGIN -->
+
+                    <div
+                        class="separador-formulario campo-grande"
+                        id="area-login"
+                    >
+
+                        <h3>
+                            Dados de acesso
+                        </h3>
+
+                        <p>
+                            O novo funcionário receberá automaticamente
+                            o perfil Funcionário.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="campo"
+                        id="campo-login"
+                    >
+
+                        <label for="colaborador-login">
+                            Login / E-mail
+                        </label>
+
+                        <input
+                            type="text"
+                            id="colaborador-login"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="campo"
+                        id="campo-senha"
+                    >
+
+                        <label for="colaborador-senha">
+                            Senha inicial
+                        </label>
+
+                        <input
+                            type="password"
+                            id="colaborador-senha"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <p
+                    class="mensagem-formulario"
+                    id="mensagem-formulario"
+                >
+                </p>
+
+
+                <div class="modal-acoes">
+
+
+                    <button
+                        type="button"
+                        class="botao-secundario"
+                        id="cancelar-colaborador"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                        id="salvar-colaborador"
+                    >
+                        Salvar colaborador
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         MODAL DETALHES
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal-detalhes"
+        hidden
+    >
+
+
+        <div class="modal-fundo"></div>
+
+
+        <div class="modal-conteudo modal-detalhes-conteudo">
+
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2>
+                        Detalhes do colaborador
+                    </h2>
+
+                    <p>
+                        Informações cadastradas no sistema.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    id="fechar-modal-detalhes"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                class="detalhes-colaborador"
+                id="detalhes-colaborador"
+            >
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="js/colaboradores-rh.js"></script>
+
+
+</body>
+
+</html>

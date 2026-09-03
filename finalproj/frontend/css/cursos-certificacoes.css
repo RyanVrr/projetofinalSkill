@@ -1,0 +1,721 @@
+/* 
+   CONTAINER
+ */
+
+.cursos-container {
+    padding: 25px 35px;
+}
+
+
+/* 
+   ABAS
+ */
+
+.abas-perfil {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 5px 15px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #e2e6ea;
+
+    overflow-x: auto;
+}
+
+.aba {
+    position: relative;
+
+    padding: 10px 0;
+
+    color: #5f6875;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.aba:hover {
+    color: #1671e8;
+}
+
+.aba.ativa {
+    color: #1671e8;
+
+    font-weight: bold;
+}
+
+.aba.ativa::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -16px;
+
+    height: 2px;
+
+    background-color: #1671e8;
+}
+
+
+/* 
+   RESUMO
+ */
+
+.cards-resumo {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.resumo-card {
+    min-height: 115px;
+
+    padding: 18px;
+
+    background-color: white;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.resumo-card span {
+    color: #5c6675;
+
+    font-size: 13px;
+}
+
+.resumo-card strong {
+    display: block;
+
+    margin: 9px 0 4px;
+
+    font-size: 27px;
+}
+
+.resumo-card p {
+    color: #7f8997;
+
+    font-size: 12px;
+}
+
+
+/* 
+   SEÇÕES
+ */
+
+.secao-lista {
+    margin-bottom: 20px;
+}
+
+.cabecalho-secao {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.cabecalho-secao h2 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.cabecalho-secao p {
+    color: #7d8794;
+
+    font-size: 13px;
+}
+
+
+/* 
+   BOTÃO ADICIONAR
+ */
+
+.botao-adicionar {
+    flex-shrink: 0;
+
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: linear-gradient(
+        90deg,
+        #1675e8,
+        #10a7df
+    );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-adicionar:hover {
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+
+/* 
+   TABELA
+ */
+
+.tabela-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+}
+
+.tabela th,
+.tabela td {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e6eaee;
+
+    text-align: left;
+
+    font-size: 13px;
+}
+
+.tabela th {
+    background-color: #f7f9fb;
+
+    color: #596474;
+
+    font-size: 12px;
+}
+
+.tabela tbody tr:hover {
+    background-color: #fafbfd;
+}
+
+.nome-curso {
+    font-weight: 600;
+}
+
+
+/* 
+   SITUAÇÃO
+ */
+
+.situacao {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.situacao.concluido {
+    background-color: #daf7e4;
+
+    color: #25844a;
+}
+
+.situacao.andamento {
+    background-color: #dcecff;
+
+    color: #2268bc;
+}
+
+
+/* 
+   AÇÕES
+ */
+
+.acoes {
+    display: flex;
+
+    gap: 7px;
+}
+
+.botao-acao {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dce1e6;
+
+    border-radius: 6px;
+
+    background-color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.botao-acao:hover {
+    background-color: #f3f6f9;
+}
+
+.editar-curso {
+    color: #316fbf;
+}
+
+.excluir-curso {
+    color: #d84242;
+}
+
+
+/* 
+   CERTIFICAÇÕES
+ */
+
+.certificacoes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.certificacao-card {
+    padding: 18px;
+
+    border: 1px solid #e0e5eb;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+}
+
+.certificacao-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.certificacao-icone {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #e2f8e9;
+
+    color: #2f9c55;
+
+    font-weight: bold;
+}
+
+.certificacao-status {
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.certificacao-status.valida {
+    background-color: #dcf8e5;
+
+    color: #219653;
+}
+
+.certificacao-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.orgao {
+    color: #7a8492;
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+}
+
+.certificacao-dados {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.certificacao-dados div {
+    display: flex;
+    flex-direction: column;
+}
+
+.certificacao-dados span {
+    color: #818a97;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+.certificacao-dados strong {
+    font-size: 12px;
+}
+
+.certificacao-acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.certificacao-acoes button {
+    padding: 7px 10px;
+
+    border: 1px solid #dce1e6;
+
+    border-radius: 6px;
+
+    background-color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.visualizar-certificacao,
+.editar-certificacao {
+    color: #326eb5;
+}
+
+.excluir-certificacao {
+    color: #d84242;
+}
+
+.certificacao-acoes button:hover {
+    background-color: #f4f7fa;
+}
+
+
+/* 
+   MODAL - FUNDO
+ */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(15, 23, 42, 0.55);
+
+    z-index: 1000;
+}
+
+.modal-overlay.ativo {
+    display: flex;
+}
+
+
+/* 
+   MODAL
+ */
+
+.modal {
+    width: 100%;
+    max-width: 470px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+
+    overflow: hidden;
+}
+
+.modal-cabecalho {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px 24px 18px;
+}
+
+.modal-cabecalho h2 {
+    margin-bottom: 5px;
+
+    font-size: 19px;
+
+    color: #172033;
+}
+
+.modal-cabecalho p {
+    color: #7d8794;
+
+    font-size: 12px;
+}
+
+.modal-fechar {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #687282;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.modal-fechar:hover {
+    background-color: #f1f3f5;
+
+    color: #172033;
+}
+
+
+/* 
+   FORMULÁRIOS
+ */
+
+#form-curso,
+#form-certificacao {
+    padding: 0 24px 24px;
+}
+
+.campo-modal {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+.campo-modal label {
+    color: #303949;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo-modal input,
+.campo-modal select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d7dde4;
+    border-radius: 7px;
+
+    background-color: white;
+
+    color: #4f5967;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo-modal input:focus,
+.campo-modal select:focus {
+    border-color: #1675e8;
+
+    box-shadow: 0 0 0 3px rgba(22, 117, 232, 0.10);
+}
+
+.duas-colunas {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+/* 
+   AÇÕES MODAL
+ */
+
+.modal-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #edf0f3;
+}
+
+.botao-cancelar,
+.botao-confirmar {
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.botao-cancelar {
+    border: 1px solid #d7dde4;
+
+    background-color: white;
+
+    color: #4f5967;
+}
+
+.botao-confirmar {
+    border: none;
+
+    background: linear-gradient(
+        90deg,
+        #1675e8,
+        #10a7df
+    );
+
+    color: white;
+}
+
+
+/* 
+   VISUALIZAÇÃO
+ */
+
+.modal-visualizacao {
+    max-width: 420px;
+}
+
+.visualizacao-certificacao {
+    padding: 0 24px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.visualizacao-certificacao div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.visualizacao-certificacao span {
+    color: #818a97;
+
+    font-size: 12px;
+}
+
+.visualizacao-certificacao strong {
+    font-size: 14px;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 1100px) {
+
+    .cards-resumo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificacoes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .cursos-container {
+        padding: 20px;
+    }
+
+    .cabecalho-secao {
+        flex-direction: column;
+    }
+
+    .cards-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .certificacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+}

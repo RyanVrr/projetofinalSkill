@@ -1,0 +1,293 @@
+/* 
+   RESET
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background-color: #f3f5f7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* 
+   ESTRUTURA PRINCIPAL
+ */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* 
+   SIDEBAR PADRÃO
+ */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    min-height: 100vh;
+
+    background-color: #07142e;
+
+    padding: 25px 15px;
+
+    color: white;
+
+    flex-shrink: 0;
+
+    position: sticky;
+    top: 0;
+}
+
+
+/* 
+   LOGO SIDEBAR
+ */
+
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.sidebar-logo img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 
+   MENU LATERAL
+ */
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    color: #dbe8f7;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    color: white;
+}
+
+
+/* 
+   ITEM ATIVO
+ */
+
+.menu-item.ativo {
+    background: linear-gradient(
+        90deg,
+        #1675e8,
+        #10b5db
+    );
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* 
+   ÍCONES SIDEBAR
+ */
+
+.menu-icone {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* 
+   TOPO PADRÃO
+ */
+
+.topo {
+    min-height: 100px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 35px;
+
+    border-bottom: 1px solid #e4e7eb;
+}
+
+.titulo-pagina h1 {
+    font-size: 26px;
+
+    margin-bottom: 5px;
+}
+
+.titulo-pagina p {
+    color: #77808f;
+
+    font-size: 14px;
+}
+
+
+/* 
+   USUÁRIO NO TOPO
+ */
+
+.usuario-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.avatar-pequeno {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #e6ebf1;
+
+    font-size: 20px;
+}
+
+.usuario-topo div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-topo span {
+    color: #77808f;
+
+    font-size: 12px;
+}
+
+
+/* 
+   CARD PADRÃO
+ */
+
+.cartao {
+    padding: 22px;
+
+    background-color: white;
+
+    border: 1px solid #e2e6ea;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+
+/* 
+   RESPONSIVIDADE GLOBAL
+ */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+}
+@media (max-width: 650px) {
+
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        position: static;
+
+        overflow-y: visible;
+    }
+
+    .sidebar-logo img {
+        width: 150px;
+    }
+
+    .menu-lateral {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .menu-item {
+        white-space: nowrap;
+    }
+
+    .topo {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .usuario-topo {
+        display: none;
+    }
+
+}

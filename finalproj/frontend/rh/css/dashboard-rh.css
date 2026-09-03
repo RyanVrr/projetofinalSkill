@@ -1,0 +1,929 @@
+/* 
+   RESET
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #172033;
+
+    background-color: #f3f5f7;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* 
+   ESTRUTURA PRINCIPAL
+ */
+
+.layout {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+.conteudo {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* 
+   SIDEBAR
+ */
+
+.sidebar {
+    width: 250px;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    background-color: #07142e;
+
+    padding: 25px 15px;
+
+    color: white;
+
+    flex-shrink: 0;
+
+    position: sticky;
+
+    top: 0;
+}
+
+
+/* 
+   LOGO
+ */
+
+.sidebar-logo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.sidebar-logo img {
+    width: 180px;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* 
+   MENU LATERAL
+ */
+
+.sidebar-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.menu-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    color: #dbe8f7;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+
+.menu-item:hover {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    color: white;
+}
+
+
+/* 
+   ITEM ATIVO
+ */
+
+.menu-item.ativo {
+    background:
+        linear-gradient(
+            90deg,
+            #1675e8,
+            #10b5db
+        );
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* 
+   ÍCONES SIDEBAR
+ */
+
+.menu-icone {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: currentColor;
+
+    font-size: 16px;
+}
+
+
+/* 
+   TOPO
+ */
+
+.topo {
+    min-height: 100px;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 35px;
+
+    border-bottom:
+        1px solid #e4e7eb;
+}
+
+
+/* 
+   TÍTULO DO TOPO
+ */
+
+.topo-titulo h1 {
+    font-size: 26px;
+
+    margin-bottom: 5px;
+}
+
+
+.topo-titulo p {
+    color: #77808f;
+
+    font-size: 14px;
+}
+
+
+/* 
+   USUÁRIO NO TOPO
+ */
+
+.usuario-topo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.usuario-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #e6ebf1;
+
+    color: #172033;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.usuario-info {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.usuario-info strong {
+    font-size: 14px;
+}
+
+
+.usuario-info span {
+    color: #77808f;
+
+    font-size: 12px;
+}
+
+
+/* 
+   ÁREA DA PÁGINA
+ */
+
+.pagina {
+    padding: 25px 35px;
+}
+
+
+/* 
+   BOAS-VINDAS
+ */
+
+.boas-vindas {
+    margin-bottom: 25px;
+}
+
+
+.titulo-menor {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #1671e8;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+}
+
+
+.boas-vindas h2 {
+    margin-bottom: 5px;
+
+    color: #172033;
+
+    font-size: 26px;
+}
+
+
+.boas-vindas p {
+    color: #77808f;
+
+    font-size: 14px;
+}
+
+
+/* 
+   CARDS DE RESUMO
+ */
+
+.cards-resumo {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.card-resumo {
+    min-height: 120px;
+
+    padding: 16px;
+
+    border:
+        1px solid #e0e5eb;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* 
+   ÍCONE DOS CARDS
+ */
+
+.card-icone {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: #edf4fd;
+
+    color: #1675e8;
+
+    font-size: 20px;
+}
+
+
+/* 
+   CONTEÚDO DOS CARDS
+ */
+
+.card-resumo > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.card-titulo {
+    color: #5c6675;
+
+    font-size: 13px;
+}
+
+
+.card-numero {
+    display: block;
+
+    margin: 10px 0 5px;
+
+    color: #172033;
+
+    font-size: 27px;
+}
+
+
+.card-descricao {
+    color: #7f8997;
+
+    font-size: 12px;
+}
+
+
+/* 
+   GRID PRINCIPAL
+ */
+
+.grade-dashboard {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        400px;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* 
+   CARD PADRÃO
+ */
+
+.painel {
+    padding: 22px;
+
+    background-color: white;
+
+    border:
+        1px solid #e2e6ea;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(
+            0,
+            0,
+            0,
+            0.03
+        );
+}
+
+
+/* 
+   CABEÇALHO DOS PAINÉIS
+ */
+
+.painel-cabecalho {
+    margin-bottom: 22px;
+}
+
+
+.painel-cabecalho-linha {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.painel-cabecalho h3 {
+    color: #172033;
+
+    font-size: 17px;
+}
+
+
+.painel-cabecalho p {
+    margin-top: 5px;
+
+    color: #818a97;
+
+    font-size: 13px;
+}
+
+
+/* 
+   HABILIDADES
+ */
+
+.lista-habilidades {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.habilidade-item {
+    display: grid;
+
+    grid-template-columns:
+        170px
+        minmax(0, 1fr)
+        35px;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.habilidade-nome {
+    color: #172033;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* 
+   BARRA DE HABILIDADE
+ */
+
+.habilidade-barra {
+    width: 100%;
+
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background-color: #e8edf2;
+}
+
+
+.habilidade-progresso {
+    height: 100%;
+
+    border-radius: 5px;
+
+    background-color: #2677de;
+}
+
+
+.habilidade-quantidade {
+    color: #5c6675;
+
+    font-size: 12px;
+
+    text-align: right;
+}
+
+
+/* 
+   AÇÕES RÁPIDAS
+ */
+
+.acoes-rapidas {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.acao {
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 70px;
+
+    padding: 12px;
+
+    border:
+        1px solid #e0e5eb;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    transition: 0.2s;
+}
+
+
+.acao:hover {
+    border-color: #b9d5f9;
+
+    background-color: #f8fbff;
+}
+
+
+/* 
+   ÍCONE AÇÕES
+ */
+
+.acao-icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background-color: #edf4fd;
+
+    color: #1675e8;
+
+    font-size: 17px;
+}
+
+
+.acao strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #172033;
+
+    font-size: 13px;
+}
+
+
+.acao span {
+    color: #7f8997;
+
+    font-size: 11px;
+}
+
+
+.acao .seta {
+    color: #1671e8;
+
+    font-size: 17px;
+}
+
+
+/* 
+   PROJETOS
+ */
+
+.projetos-painel {
+    margin-bottom: 20px;
+}
+
+
+.link-ver-todos {
+    color: #1671e8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.link-ver-todos:hover {
+    color: #0c5fca;
+}
+
+
+/* 
+   TABELA
+ */
+
+.tabela-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+thead {
+    background-color: #f7f9fb;
+}
+
+
+th {
+    padding: 13px 15px;
+
+    color: #5c6675;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    border-bottom:
+        1px solid #e2e6ea;
+}
+
+
+td {
+    padding: 15px;
+
+    color: #525c6b;
+
+    font-size: 13px;
+
+    border-bottom:
+        1px solid #e8edf2;
+}
+
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.projeto-nome {
+    color: #172033;
+
+    font-weight: 600;
+}
+
+
+/* 
+   STATUS
+ */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.status-ativo {
+    background-color: #dcf8e5;
+
+    color: #219653;
+}
+
+
+.status-concluido {
+    background-color: #e6ebf1;
+
+    color: #525c6b;
+}
+
+
+.status-futuro {
+    background-color: #fff4d7;
+
+    color: #a86f00;
+}
+
+
+/* 
+   ESTADOS
+ */
+
+.estado-carregando {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #818a97;
+
+    font-size: 13px;
+}
+
+
+.tabela-vazia {
+    padding: 35px;
+
+    color: #818a97;
+
+    text-align: center;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 1100px) {
+
+    .cards-resumo {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .grade-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+
+    .sidebar {
+        width: 100%;
+
+        height: auto;
+        min-height: auto;
+
+        position: static;
+
+        overflow-y: visible;
+    }
+
+
+    .sidebar-logo img {
+        width: 150px;
+    }
+
+
+    .sidebar-menu {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+
+    .menu-item {
+        white-space: nowrap;
+    }
+
+
+    .topo {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .usuario-topo {
+        display: none;
+    }
+
+
+    .pagina {
+        padding: 20px;
+    }
+
+
+    .cards-resumo {
+        grid-template-columns: 1fr;
+    }
+
+
+    .habilidade-item {
+        grid-template-columns:
+            110px
+            minmax(100px, 1fr)
+            30px;
+
+        gap: 10px;
+    }
+
+
+    .painel-cabecalho-linha {
+        flex-direction: column;
+    }
+
+}

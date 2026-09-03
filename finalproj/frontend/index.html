@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - SkillMatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <!-- Área de apresentação -->
+        <section class="login-apresentacao">
+
+            <!-- Logo principal -->
+            <div class="logo">
+                <img src="logo-skillmatch.png" alt="Logo SkillMatch">
+            </div>
+
+            <!-- Benefícios -->
+            <div class="beneficios">
+
+                <div class="beneficio">
+                    <span>✓</span>
+                    <p>Gestão inteligente de funcionários</p>
+                </div>
+
+                <div class="beneficio">
+                    <span>✓</span>
+                    <p>Habilidades técnicas e comportamentais</p>
+                </div>
+
+                <div class="beneficio">
+                    <span>✓</span>
+                    <p>Alocação estratégica em projetos</p>
+                </div>
+
+                <div class="beneficio">
+                    <span>✓</span>
+                    <p>Dados e relatórios para decisões assertivas</p>
+                </div>
+
+            </div>
+
+            <!-- Slogan -->
+            <p class="slogan">
+                Conectando talentos às oportunidades certas.
+            </p>
+
+        </section>
+
+
+        <!-- Área do formulário -->
+        <section class="login-formulario">
+
+            <h2>Bem-vindo!</h2>
+
+            <p>
+                Faça login para acessar sua conta.
+            </p>
+
+            <form id="form-login">
+
+                <!-- E-mail -->
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seu@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Senha -->
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <div class="campo-senha">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="mostrar-senha"
+                            id="mostrar-senha"
+                            aria-label="Mostrar senha"
+                        >
+
+                            <svg
+                                class="icone-olho"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="3"
+                                />
+
+                                <line
+                                    id="risco-olho"
+                                    x1="3"
+                                    y1="3"
+                                    x2="21"
+                                    y2="21"
+                                />
+                            </svg>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recuperação de senha -->
+                <div class="recuperacao">
+
+                    <a href="#">
+                        Esqueceu sua senha?
+                    </a>
+
+                </div>
+
+
+                <!-- Botão de login -->
+                <button type="submit">
+                    Entrar
+                </button>
+
+
+                <!-- Área para mensagens -->
+                <div class="mensagem-login" id="mensagem-login">
+
+                    <!--
+                        Futuramente serão exibidas aqui
+                        mensagens de erro ou sucesso.
+                    -->
+
+                </div>
+
+            </form>
+
+
+            <!-- Contato com administrador -->
+            <p class="cadastro">
+
+                Não tem uma conta?
+
+                <a href="#">
+                    Fale com o administrador.
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/supabase.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

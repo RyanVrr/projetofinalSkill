@@ -1,0 +1,434 @@
+body {
+    min-height: 100vh;
+    background-color: #e8e8e8;
+}
+
+
+/* 
+   CONTAINER PRINCIPAL
+ */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* 
+   LADO ESQUERDO
+ */
+
+.login-apresentacao {
+    width: 450px;
+    min-height: 600px;
+
+    background: linear-gradient(
+        160deg,
+        #07142e 0%,
+        #08285f 50%,
+        #063bbd 100%
+    );
+
+    color: white;
+
+    padding: 45px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 25px 0 0 25px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* 
+   LOGO DE FUNDO
+ */
+
+.login-apresentacao::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: 52%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("../logo-skillmatch.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.07;
+
+    pointer-events: none;
+}
+
+
+/* Mantém o conteúdo acima da logo de fundo */
+
+.login-apresentacao > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* 
+   LOGO PRINCIPAL
+ */
+
+.login-apresentacao .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.login-apresentacao .logo img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* 
+   BENEFÍCIOS
+ */
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.beneficio span {
+    color: #5df238;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.beneficio p {
+    font-size: 15px;
+}
+
+
+/* 
+   SLOGAN
+ */
+
+.slogan {
+    text-align: center;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+/* 
+   LADO DIREITO
+ */
+
+.login-formulario {
+    width: 450px;
+    min-height: 600px;
+
+    background-color: #f8f8f8;
+
+    padding: 60px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 0 25px 25px 0;
+}
+
+.login-formulario h2 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+    color: #111827;
+}
+
+.login-formulario > p {
+    color: #6b7280;
+
+    margin-bottom: 30px;
+}
+
+
+/* 
+   CAMPOS
+ */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.campo label {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #111827;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus {
+    border-color: #0b7be5;
+
+    box-shadow: 0 0 0 2px rgba(11, 123, 229, 0.1);
+}
+
+
+/* 
+   CAMPO DE SENHA
+ */
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    width: 100%;
+
+    /* Espaço para o ícone */
+    padding-right: 50px;
+}
+
+
+/* 
+   BOTÃO MOSTRAR SENHA
+ */
+
+.mostrar-senha {
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.icone-olho {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: #555;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.mostrar-senha:hover .icone-olho {
+    stroke: #0b63e5;
+}
+
+
+/* 
+   RECUPERAÇÃO DE SENHA
+ */
+
+.recuperacao {
+    text-align: right;
+
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.recuperacao a {
+    color: #0b63e5;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.recuperacao a:hover {
+    text-decoration: underline;
+}
+
+
+/* 
+   BOTÃO ENTRAR
+ */
+
+form > button[type="submit"] {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #0873df 0%,
+        #08bcd4 50%,
+        #59df32 100%
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+form > button[type="submit"]:hover {
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+
+/* 
+   MENSAGENS
+ */
+
+.mensagem-login {
+    margin-top: 15px;
+
+    font-size: 13px;
+}
+
+
+/* 
+   CONTATO ADMINISTRADOR
+ */
+
+.cadastro {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+.cadastro a {
+    color: #0b63e5;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 900px) {
+
+    .login-container {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .login-apresentacao,
+    .login-formulario {
+        width: 100%;
+        max-width: 500px;
+
+        min-height: auto;
+    }
+
+    .login-apresentacao {
+        border-radius: 25px 25px 0 0;
+
+        padding: 40px 30px;
+    }
+
+    .login-formulario {
+        border-radius: 0 0 25px 25px;
+
+        padding: 40px 30px;
+    }
+
+    .login-apresentacao .logo img {
+        width: 220px;
+    }
+
+    .login-apresentacao::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    .slogan {
+        margin-top: 30px;
+    }
+
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minhas Habilidades - SkillMatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/habilidades.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="logo-skillmatch.png" alt="Logo SkillMatch">
+            </div>
+
+            <nav class="menu-lateral">
+
+                <a href="perfil.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"></path>
+                    </svg>
+
+                    <span>Perfil</span>
+
+                </a>
+
+
+                <a href="habilidades.html" class="menu-item ativo">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-3 3-3-3 3-3z"></path>
+                    </svg>
+
+                    <span>Habilidades</span>
+
+                </a>
+
+
+                <a href="cursos-certificacoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 5h7a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"></path>
+                        <path d="M20 5h-7a3 3 0 0 0-3 3v11h7a3 3 0 0 1 3 3z"></path>
+                    </svg>
+
+                    <span>Cursos / Certificações</span>
+
+                </a>
+
+
+                <a href="experiencias.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+
+                    <span>Experiências</span>
+
+                </a>
+
+
+                <a href="relatorios.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 20V10"></path>
+                        <path d="M10 20V4"></path>
+                        <path d="M16 20v-7"></path>
+                        <path d="M22 20H2"></path>
+                    </svg>
+
+                    <span>Relatórios</span>
+
+                </a>
+
+
+                <a href="configuracoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+
+                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21h-4v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-2.8-2.8.1-.1A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2.8-2.8.1.1A1.7 1.7 0 0 0 9 4.6 1.7 1.7 0 0 0 10 3V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 2.8 2.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1H21v4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                    </svg>
+
+                    <span>Configurações</span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <div class="conteudo">
+
+            <header class="topo">
+
+                <div class="titulo-pagina">
+
+                    <h1>Minhas Habilidades</h1>
+
+                    <p>
+                        Visualize e gerencie suas habilidades e níveis de conhecimento.
+                    </p>
+
+                </div>
+
+
+                <div class="usuario-topo">
+
+                    <div class="avatar-pequeno">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <strong id="topo-nome">
+                            Colaborador
+                        </strong>
+
+                        <span>
+                            Colaborador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <main class="habilidades-container">
+
+                <!-- ABAS -->
+                <nav class="abas-perfil">
+
+                    <a href="perfil.html" class="aba">
+                        Visão Geral
+                    </a>
+
+                    <a href="habilidades.html" class="aba ativa">
+                        Habilidades
+                    </a>
+
+                    <a href="cursos-certificacoes.html" class="aba">
+                        Cursos / Certificações
+                    </a>
+
+                    <a href="experiencias.html" class="aba">
+                        Experiências
+                    </a>
+
+                </nav>
+
+
+                <!-- CARD -->
+                <section class="cartao">
+
+                    <div class="cabecalho-habilidades">
+
+                        <div>
+
+                            <h2>
+                                Habilidades
+                            </h2>
+
+                            <p>
+                                Acompanhe suas competências e níveis de conhecimento.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="botao-adicionar"
+                            id="abrir-modal-habilidade"
+                        >
+                            + Adicionar habilidade
+                        </button>
+
+                    </div>
+
+
+                    <!-- TABELA -->
+                    <div class="tabela-container">
+
+                        <table class="tabela-habilidades">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Habilidade</th>
+                                    <th>Nível de conhecimento</th>
+                                    <th>Experiência</th>
+                                    <th>Ações</th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tabela-habilidades-corpo">
+
+                                <!--
+                                    As habilidades serão
+                                    carregadas do Supabase.
+                                -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div class="rodape-tabela">
+
+                        <span id="contador-habilidades">
+                            Carregando habilidades...
+                        </span>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL
+    ========================== -->
+
+    <div
+        class="modal-overlay"
+        id="modal-habilidade"
+        aria-hidden="true"
+    >
+
+        <div class="modal-habilidade">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2 id="titulo-modal-habilidade">
+                        Adicionar Habilidade
+                    </h2>
+
+                    <p>
+                        Adicione uma competência ao seu perfil.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="modal-fechar"
+                    id="fechar-modal-habilidade"
+                    aria-label="Fechar"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-habilidade">
+
+                <!-- HABILIDADE -->
+                <div class="campo-modal">
+
+                    <label for="nova-habilidade">
+
+                        Habilidade
+                        <span>*</span>
+
+                    </label>
+
+
+                    <select
+                        id="nova-habilidade"
+                        required
+                    >
+
+                        <option value="">
+                            Carregando habilidades...
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- NÍVEL -->
+                <div class="campo-modal">
+
+                    <label for="nivel-habilidade">
+
+                        Nível de conhecimento
+                        <span>*</span>
+
+                    </label>
+
+
+                    <select
+                        id="nivel-habilidade"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione o nível
+                        </option>
+
+                        <option value="1">
+                            Básico
+                        </option>
+
+                        <option value="2">
+                            Intermediário
+                        </option>
+
+                        <option value="3">
+                            Avançado
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- EXPERIÊNCIA -->
+                <div class="campo-modal">
+
+                    <label for="experiencia-habilidade">
+
+                        Tempo de experiência
+                        <span>*</span>
+
+                    </label>
+
+
+                    <select
+                        id="experiencia-habilidade"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Menos de 6 meses">
+                            Menos de 6 meses
+                        </option>
+
+                        <option value="6 meses">
+                            6 meses
+                        </option>
+
+                        <option value="1 ano">
+                            1 ano
+                        </option>
+
+                        <option value="2 anos">
+                            2 anos
+                        </option>
+
+                        <option value="3 anos">
+                            3 anos
+                        </option>
+
+                        <option value="4 anos">
+                            4 anos
+                        </option>
+
+                        <option value="5 anos ou mais">
+                            5 anos ou mais
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="botao-cancelar"
+                        id="cancelar-habilidade"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="botao-confirmar"
+                        id="salvar-habilidade"
+                    >
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/supabase.js"></script>
+    <script src="js/habilidades.js"></script>
+
+</body>
+
+</html>

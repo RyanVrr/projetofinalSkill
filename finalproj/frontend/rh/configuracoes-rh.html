@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Configurações | SkillMatch</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard-rh.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/configuracoes-rh.css"
+    >
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../logo-skillmatch.png"
+                    alt="SkillMatch"
+                >
+
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="colaboradores-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">♙</span>
+                    <span>Colaboradores</span>
+                </a>
+
+                <a
+                    href="projetos-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">◫</span>
+                    <span>Projetos</span>
+                </a>
+
+                <a
+                    href="matching-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">✦</span>
+                    <span>Matching</span>
+                </a>
+
+                <a
+                    href="relatorios-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">▤</span>
+                    <span>Relatórios</span>
+                </a>
+
+                <a
+                    href="configuracoes-rh.html"
+                    class="menu-item ativo"
+                >
+                    <span class="menu-icone">⚙</span>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <main class="conteudo">
+
+            <header class="topo">
+
+                <div class="topo-titulo">
+
+                    <h1>
+                        Configurações
+                    </h1>
+
+                    <p>
+                        Gerencie suas informações e preferências.
+                    </p>
+
+                </div>
+
+                <div class="usuario-topo">
+
+                    <div
+                        class="usuario-avatar"
+                        id="usuario-avatar"
+                    >
+                        RH
+                    </div>
+
+                    <div class="usuario-info">
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Recursos Humanos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="pagina configuracoes-pagina">
+
+                <div class="cabecalho-configuracoes">
+
+                    <div>
+
+                        <span class="titulo-menor">
+                            PREFERÊNCIAS
+                        </span>
+
+                        <h2>
+                            Configurações da conta
+                        </h2>
+
+                        <p>
+                            Consulte seus dados e personalize algumas preferências do sistema.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERFIL -->
+
+                <section class="painel configuracao-card">
+
+                    <div class="configuracao-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Perfil do RH
+                            </h3>
+
+                            <p>
+                                Informações vinculadas à sua conta.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="perfil-config">
+
+                        <div
+                            class="perfil-avatar-grande"
+                            id="perfil-avatar"
+                        >
+                            RH
+                        </div>
+
+                        <div class="perfil-config-info">
+
+                            <h4 id="perfil-nome">
+                                Carregando...
+                            </h4>
+
+                            <span id="perfil-cargo">
+                                Recursos Humanos
+                            </span>
+
+                            <p id="perfil-setor">
+                                Setor não informado
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dados-configuracao">
+
+                        <div class="campo-configuracao">
+
+                            <span>
+                                Matrícula
+                            </span>
+
+                            <strong id="perfil-matricula">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="campo-configuracao">
+
+                            <span>
+                                Contato
+                            </span>
+
+                            <strong id="perfil-contato">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="campo-configuracao">
+
+                            <span>
+                                Login
+                            </span>
+
+                            <strong id="perfil-login">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="campo-configuracao">
+
+                            <span>
+                                Status
+                            </span>
+
+                            <strong
+                                id="perfil-status"
+                                class="status-conta ativo"
+                            >
+                                Ativo
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <section class="painel configuracao-card">
+
+                    <div class="configuracao-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Notificações
+                            </h3>
+
+                            <p>
+                                Escolha quais alertas deseja visualizar no sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="lista-preferencias">
+
+                        <div class="preferencia-item">
+
+                            <div>
+
+                                <strong>
+                                    Novos colaboradores
+                                </strong>
+
+                                <span>
+                                    Avisar quando um novo colaborador for cadastrado.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="notif-colaboradores"
+                                    checked
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="preferencia-item">
+
+                            <div>
+
+                                <strong>
+                                    Novos projetos
+                                </strong>
+
+                                <span>
+                                    Avisar quando um novo projeto for criado.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="notif-projetos"
+                                    checked
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="preferencia-item">
+
+                            <div>
+
+                                <strong>
+                                    Resultados de Matching
+                                </strong>
+
+                                <span>
+                                    Exibir alertas relacionados às análises de compatibilidade.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="notif-matching"
+                                    checked
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="mensagem-preferencia"
+                        id="mensagem-preferencia"
+                    ></div>
+
+                </section>
+
+
+                <!-- CARGOS E SETORES -->
+
+                <section class="painel configuracao-card">
+
+                    <div class="configuracao-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Cargos e setores
+                            </h3>
+
+                            <p>
+                                Cadastre novas opções para utilizar no cadastro de colaboradores.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gerenciamento-config">
+
+                        <div class="gerenciamento-bloco">
+
+                            <div class="gerenciamento-titulo">
+
+                                <strong>
+                                    Novo setor
+                                </strong>
+
+                            </div>
+
+                            <div class="gerenciamento-form">
+
+                                <input
+                                    type="text"
+                                    id="novo-setor"
+                                    placeholder="Nome do setor"
+                                    maxlength="100"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="botao-gerenciamento"
+                                    id="adicionar-setor"
+                                >
+                                    + Adicionar
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="lista-gerenciamento"
+                                id="lista-setores"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="gerenciamento-bloco">
+
+                            <div class="gerenciamento-titulo">
+
+                                <strong>
+                                    Novo cargo
+                                </strong>
+
+                            </div>
+
+                            <div class="gerenciamento-form gerenciamento-form-cargo">
+
+                                <input
+                                    type="text"
+                                    id="novo-cargo"
+                                    placeholder="Nome do cargo"
+                                    maxlength="100"
+                                >
+
+                                <select id="novo-cargo-nivel">
+
+                                    <option value="1">
+                                        Nível 1
+                                    </option>
+
+                                    <option value="2" selected>
+                                        Nível 2
+                                    </option>
+
+                                    <option value="3">
+                                        Nível 3
+                                    </option>
+
+                                </select>
+
+                                <button
+                                    type="button"
+                                    class="botao-gerenciamento"
+                                    id="adicionar-cargo"
+                                >
+                                    + Adicionar
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="lista-gerenciamento"
+                                id="lista-cargos"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SISTEMA -->
+
+                <section class="painel configuracao-card">
+
+                    <div class="configuracao-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Sistema
+                            </h3>
+
+                            <p>
+                                Informações gerais da aplicação.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dados-sistema">
+
+                        <div>
+
+                            <span>
+                                Aplicação
+                            </span>
+
+                            <strong>
+                                SkillMatch
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Área
+                            </span>
+
+                            <strong>
+                                Recursos Humanos
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Versão
+                            </span>
+
+                            <strong>
+                                1.0 MVP
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SAIR -->
+
+                <section class="painel configuracao-card sessao-sair">
+
+                    <div>
+
+                        <h3>
+                            Encerrar sessão
+                        </h3>
+
+                        <p>
+                            Finalize o acesso atual ao SkillMatch.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="botao-sair"
+                        class="botao-sair"
+                    >
+                        Sair da conta
+                    </button>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="js/configuracoes-rh.js"></script>
+
+</body>
+
+</html>

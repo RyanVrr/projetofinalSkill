@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Matching Inteligente | SkillMatch</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard-rh.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/matching-rh.css"
+    >
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../logo-skillmatch.png"
+                    alt="SkillMatch"
+                >
+
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="colaboradores-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">♙</span>
+                    <span>Colaboradores</span>
+                </a>
+
+                <a
+                    href="projetos-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">◫</span>
+                    <span>Projetos</span>
+                </a>
+
+                <a
+                    href="matching-rh.html"
+                    class="menu-item ativo"
+                >
+                    <span class="menu-icone">✦</span>
+                    <span>Matching</span>
+                </a>
+
+                <a
+                    href="relatorios-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">▤</span>
+                    <span>Relatórios</span>
+                </a>
+
+                <a
+                    href="configuracoes-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⚙</span>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTEÚDO
+        ========================== -->
+
+        <main class="conteudo">
+
+            <!-- TOPO -->
+
+            <header class="topo">
+
+                <div class="topo-titulo">
+
+                    <h1>
+                        Matching Inteligente
+                    </h1>
+
+                    <p>
+                        Encontre os colaboradores mais adequados para cada projeto.
+                    </p>
+
+                </div>
+
+                <div class="usuario-topo">
+
+                    <div
+                        class="usuario-avatar"
+                        id="usuario-avatar"
+                    >
+                        RH
+                    </div>
+
+                    <div class="usuario-info">
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Recursos Humanos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 MATCHING
+            ========================== -->
+
+            <section class="pagina matching-pagina">
+
+                <div class="matching-cabecalho">
+
+                    <div>
+
+                        <span class="titulo-menor">
+                            ASSISTENTE DE MATCHING
+                        </span>
+
+                        <h2>
+                            Converse com o SkillMatch
+                        </h2>
+
+                        <p>
+                            Selecione um projeto e encontre os profissionais
+                            com maior compatibilidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     CHAT
+                ========================== -->
+
+                <section class="chat-card">
+
+                    <!-- CABEÇALHO CHAT -->
+
+                    <div class="chat-topo">
+
+                        <div class="assistente-info">
+
+                            <div class="assistente-avatar">
+                                ✦
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    SkillMatch IA
+                                </strong>
+
+                                <span>
+                                    Assistente de talentos
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="status-assistente">
+
+                            <span class="status-ponto"></span>
+
+                            Disponível
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJETO -->
+
+                    <div class="seletor-projeto-area">
+
+                        <label for="projeto-matching">
+                            Projeto analisado
+                        </label>
+
+                        <select id="projeto-matching">
+
+                            <option value="">
+                                Selecione um projeto
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- MENSAGENS -->
+
+                    <div
+                        class="chat-mensagens"
+                        id="chat-mensagens"
+                    >
+
+                        <div class="mensagem mensagem-ia">
+
+                            <div class="mensagem-avatar">
+                                ✦
+                            </div>
+
+                            <div class="mensagem-conteudo">
+
+                                <span class="mensagem-remetente">
+                                    SkillMatch IA
+                                </span>
+
+                                <div class="balao balao-ia">
+
+                                    <p>
+                                        Olá! Selecione um projeto acima e eu
+                                        posso analisar quais colaboradores mais
+                                        combinam com os requisitos cadastrados.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUGESTÕES -->
+
+                    <div class="sugestoes-chat">
+
+                        <span>
+                            Sugestões
+                        </span>
+
+                        <div class="sugestoes-botoes">
+
+                            <button
+                                type="button"
+                                class="botao-sugestao"
+                                data-mensagem="Encontre os melhores colaboradores para este projeto."
+                            >
+                                Encontrar melhores colaboradores
+                            </button>
+
+                            <button
+                                type="button"
+                                class="botao-sugestao"
+                                data-mensagem="Quais são os requisitos deste projeto?"
+                            >
+                                Mostrar requisitos
+                            </button>
+
+                            <button
+                                type="button"
+                                class="botao-sugestao"
+                                data-mensagem="Quem possui maior compatibilidade?"
+                            >
+                                Maior compatibilidade
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INPUT -->
+
+                    <form
+                        class="chat-form"
+                        id="chat-form"
+                    >
+
+                        <textarea
+                            id="mensagem-chat"
+                            placeholder="Pergunte sobre os colaboradores ou sobre o projeto..."
+                            rows="1"
+                        ></textarea>
+
+                        <button
+                            type="submit"
+                            id="enviar-mensagem"
+                            class="botao-enviar"
+                        >
+                            Enviar
+                        </button>
+
+                    </form>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="js/matching-rh.js"></script>
+
+</body>
+
+</html>

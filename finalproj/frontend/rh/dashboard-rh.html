@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard RH | SkillMatch</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard-rh.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="layout">
+
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+
+        <aside class="sidebar">
+
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../logo-skillmatch.png"
+                    alt="SkillMatch"
+                >
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+
+                <a
+                    href="dashboard-rh.html"
+                    class="menu-item ativo"
+                >
+
+                    <span class="menu-icone">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="colaboradores-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ♙
+                    </span>
+
+                    <span>
+                        Colaboradores
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="projetos-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ◫
+                    </span>
+
+                    <span>
+                        Projetos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="matching-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ✦
+                    </span>
+
+                    <span>
+                        Matching
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="relatorios-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ▤
+                    </span>
+
+                    <span>
+                        Relatórios
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="configuracoes-rh.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icone">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+        </aside>
+
+
+        <!-- ========================================
+             CONTEÚDO
+        ========================================= -->
+
+        <main class="conteudo">
+
+
+            <!-- ========================================
+                 CABEÇALHO
+            ========================================= -->
+
+            <header class="topo">
+
+
+                <div class="topo-titulo">
+
+                    <h1>
+                        Dashboard RH
+                    </h1>
+
+                    <p>
+                        Visão geral da equipe e dos projetos.
+                    </p>
+
+                </div>
+
+
+                <div class="usuario-topo">
+
+
+                    <div
+                        class="usuario-avatar"
+                        id="usuario-avatar"
+                    >
+                        RH
+                    </div>
+
+
+                    <div class="usuario-info">
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Recursos Humanos
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ========================================
+                 PÁGINA
+            ========================================= -->
+
+            <section class="pagina">
+
+
+                <!-- ========================================
+                     BOAS-VINDAS
+                ========================================= -->
+
+                <div class="boas-vindas">
+
+
+                    <span class="titulo-menor">
+                        VISÃO GERAL
+                    </span>
+
+
+                    <h2>
+
+                        Olá,
+
+                        <span id="nome-boas-vindas">
+                            RH
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Acompanhe colaboradores,
+                        projetos e habilidades da equipe.
+
+                    </p>
+
+
+                </div>
+
+
+                <!-- ========================================
+                     CARDS
+                ========================================= -->
+
+                <div class="cards-resumo">
+
+
+                    <article class="card-resumo">
+
+
+                        <div class="card-icone">
+                            ♙
+                        </div>
+
+
+                        <div>
+
+                            <span class="card-titulo">
+                                Colaboradores
+                            </span>
+
+
+                            <strong
+                                class="card-numero"
+                                id="total-colaboradores"
+                            >
+                                0
+                            </strong>
+
+
+                            <span class="card-descricao">
+                                cadastrados no sistema
+                            </span>
+
+                        </div>
+
+
+                    </article>
+
+
+                    <article class="card-resumo">
+
+
+                        <div class="card-icone">
+                            ▶
+                        </div>
+
+
+                        <div>
+
+                            <span class="card-titulo">
+                                Projetos ativos
+                            </span>
+
+
+                            <strong
+                                class="card-numero"
+                                id="total-projetos-ativos"
+                            >
+                                0
+                            </strong>
+
+
+                            <span class="card-descricao">
+                                em andamento
+                            </span>
+
+                        </div>
+
+
+                    </article>
+
+
+                    <article class="card-resumo">
+
+
+                        <div class="card-icone">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <span class="card-titulo">
+                                Projetos concluídos
+                            </span>
+
+
+                            <strong
+                                class="card-numero"
+                                id="total-projetos-concluidos"
+                            >
+                                0
+                            </strong>
+
+
+                            <span class="card-descricao">
+                                já finalizados
+                            </span>
+
+                        </div>
+
+
+                    </article>
+
+
+                    <article class="card-resumo">
+
+
+                        <div class="card-icone">
+                            ✦
+                        </div>
+
+
+                        <div>
+
+                            <span class="card-titulo">
+                                Habilidades
+                            </span>
+
+
+                            <strong
+                                class="card-numero"
+                                id="total-habilidades"
+                            >
+                                0
+                            </strong>
+
+
+                            <span class="card-descricao">
+                                disponíveis no catálogo
+                            </span>
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- ========================================
+                     CONTEÚDO CENTRAL
+                ========================================= -->
+
+                <div class="grade-dashboard">
+
+
+                    <!-- HABILIDADES -->
+
+                    <section class="painel">
+
+
+                        <div class="painel-cabecalho">
+
+                            <h3>
+                                Habilidades mais comuns
+                            </h3>
+
+                            <p>
+
+                                Competências mais presentes
+                                entre os colaboradores.
+
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="lista-habilidades"
+                            id="lista-habilidades"
+                        >
+
+                            <div class="estado-carregando">
+
+                                Carregando habilidades...
+
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- AÇÕES RÁPIDAS -->
+
+                    <section class="painel">
+
+
+                        <div class="painel-cabecalho">
+
+                            <h3>
+                                Ações rápidas
+                            </h3>
+
+                            <p>
+                                Acesse as principais áreas do RH.
+                            </p>
+
+                        </div>
+
+
+                        <div class="acoes-rapidas">
+
+
+                            <a
+                                href="colaboradores-rh.html"
+                                class="acao"
+                            >
+
+                                <div class="acao-icone">
+                                    ♙
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        Gerenciar colaboradores
+                                    </strong>
+
+                                    <span>
+                                        Visualizar e cadastrar funcionários
+                                    </span>
+
+                                </div>
+
+
+                                <span class="seta">
+                                    →
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="projetos-rh.html"
+                                class="acao"
+                            >
+
+                                <div class="acao-icone">
+                                    ◫
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        Gerenciar projetos
+                                    </strong>
+
+                                    <span>
+                                        Criar e acompanhar projetos
+                                    </span>
+
+                                </div>
+
+
+                                <span class="seta">
+                                    →
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="matching-rh.html"
+                                class="acao"
+                            >
+
+                                <div class="acao-icone">
+                                    ✦
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        Realizar Matching
+                                    </strong>
+
+                                    <span>
+
+                                        Encontrar colaboradores
+                                        compatíveis
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="seta">
+                                    →
+                                </span>
+
+                            </a>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+
+                <!-- ========================================
+                     PROJETOS RECENTES
+                ========================================= -->
+
+                <section class="painel projetos-painel">
+
+
+                    <div
+                        class="
+                            painel-cabecalho
+                            painel-cabecalho-linha
+                        "
+                    >
+
+
+                        <div>
+
+                            <h3>
+                                Projetos recentes
+                            </h3>
+
+                            <p>
+
+                                Últimos projetos cadastrados
+                                no SkillMatch.
+
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="projetos-rh.html"
+                            class="link-ver-todos"
+                        >
+                            Ver todos
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="tabela-container">
+
+
+                        <table>
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Projeto
+                                    </th>
+
+                                    <th>
+                                        Início
+                                    </th>
+
+                                    <th>
+                                        Término
+                                    </th>
+
+                                    <th>
+                                        Situação
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tabela-projetos">
+
+                                <tr>
+
+                                    <td
+                                        colspan="4"
+                                        class="tabela-vazia"
+                                    >
+
+                                        Carregando projetos...
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="js/dashboard-rh.js"></script>
+
+
+</body>
+
+</html>

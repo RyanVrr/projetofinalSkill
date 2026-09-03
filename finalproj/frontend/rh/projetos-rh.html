@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Projetos | SkillMatch</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard-rh.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/projetos-rh.css"
+    >
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../logo-skillmatch.png"
+                    alt="SkillMatch"
+                >
+
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="colaboradores-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">♙</span>
+                    <span>Colaboradores</span>
+                </a>
+
+                <a
+                    href="projetos-rh.html"
+                    class="menu-item ativo"
+                >
+                    <span class="menu-icone">◫</span>
+                    <span>Projetos</span>
+                </a>
+
+                <a
+                    href="matching-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">✦</span>
+                    <span>Matching</span>
+                </a>
+
+                <a
+                    href="relatorios-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">▤</span>
+                    <span>Relatórios</span>
+                </a>
+
+                <a
+                    href="configuracoes-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⚙</span>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTEÚDO
+        ========================== -->
+
+        <main class="conteudo">
+
+            <!-- =========================
+                 TOPO
+            ========================== -->
+
+            <header class="topo">
+
+                <div class="topo-titulo">
+
+                    <h1>
+                        Projetos
+                    </h1>
+
+                    <p>
+                        Gerencie projetos e as habilidades necessárias.
+                    </p>
+
+                </div>
+
+                <div class="usuario-topo">
+
+                    <div
+                        class="usuario-avatar"
+                        id="usuario-avatar"
+                    >
+                        RH
+                    </div>
+
+                    <div class="usuario-info">
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Recursos Humanos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 PÁGINA
+            ========================== -->
+
+            <section class="pagina projetos-pagina">
+
+                <!-- CABEÇALHO -->
+
+                <div class="cabecalho-pagina">
+
+                    <div>
+
+                        <span class="titulo-menor">
+                            GESTÃO DE PROJETOS
+                        </span>
+
+                        <h2>
+                            Projetos da empresa
+                        </h2>
+
+                        <p>
+                            Cadastre projetos e defina as competências necessárias.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="botao-principal"
+                        id="abrir-modal-projeto"
+                    >
+                        <span>+</span>
+                        Novo projeto
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     RESUMO
+                ========================== -->
+
+                <div class="cards-projetos">
+
+                    <div class="resumo-projeto">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="total-projetos">
+                            0
+                        </strong>
+
+                        <p>
+                            projetos cadastrados
+                        </p>
+
+                    </div>
+
+
+                    <div class="resumo-projeto">
+
+                        <span>
+                            Ativos
+                        </span>
+
+                        <strong id="total-ativos">
+                            0
+                        </strong>
+
+                        <p>
+                            em andamento
+                        </p>
+
+                    </div>
+
+
+                    <div class="resumo-projeto">
+
+                        <span>
+                            Planejados
+                        </span>
+
+                        <strong id="total-planejados">
+                            0
+                        </strong>
+
+                        <p>
+                            ainda não iniciados
+                        </p>
+
+                    </div>
+
+
+                    <div class="resumo-projeto">
+
+                        <span>
+                            Concluídos
+                        </span>
+
+                        <strong id="total-concluidos">
+                            0
+                        </strong>
+
+                        <p>
+                            projetos finalizados
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     PAINEL
+                ========================== -->
+
+                <section class="painel painel-projetos">
+
+                    <div class="barra-filtros">
+
+                        <div class="campo-pesquisa">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="text"
+                                id="pesquisa-projeto"
+                                placeholder="Pesquisar projeto..."
+                            >
+
+                        </div>
+
+
+                        <select id="filtro-status">
+
+                            <option value="">
+                                Todos os status
+                            </option>
+
+                            <option value="ativo">
+                                Ativos
+                            </option>
+
+                            <option value="planejado">
+                                Planejados
+                            </option>
+
+                            <option value="concluido">
+                                Concluídos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="tabela-container">
+
+                        <table class="tabela-projetos">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Projeto
+                                    </th>
+
+                                    <th>
+                                        Início
+                                    </th>
+
+                                    <th>
+                                        Fim
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Habilidades
+                                    </th>
+
+                                    <th>
+                                        Ações
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="corpo-tabela-projetos">
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="tabela-vazia"
+                                    >
+                                        Carregando projetos...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL PROJETO
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal-projeto"
+        hidden
+    >
+
+        <div class="modal-fundo"></div>
+
+        <div class="modal-conteudo">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2 id="titulo-modal-projeto">
+                        Novo projeto
+                    </h2>
+
+                    <p id="descricao-modal-projeto">
+                        Cadastre um novo projeto.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    id="fechar-modal-projeto"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-projeto">
+
+                <input
+                    type="hidden"
+                    id="projeto-id"
+                >
+
+
+                <div class="grade-formulario">
+
+                    <div class="campo campo-grande">
+
+                        <label for="projeto-nome">
+                            Nome do projeto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="projeto-nome"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo campo-grande">
+
+                        <label for="projeto-descricao">
+                            Descrição
+                        </label>
+
+                        <textarea
+                            id="projeto-descricao"
+                            rows="5"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="projeto-data-inicio">
+                            Data de início
+                        </label>
+
+                        <input
+                            type="date"
+                            id="projeto-data-inicio"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="projeto-data-fim">
+                            Data de término
+                        </label>
+
+                        <input
+                            type="date"
+                            id="projeto-data-fim"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="mensagem-formulario"
+                    id="mensagem-formulario"
+                ></p>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="botao-secundario"
+                        id="cancelar-projeto"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                        id="salvar-projeto"
+                    >
+                        Salvar projeto
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL HABILIDADES
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal-habilidades"
+        hidden
+    >
+
+        <div class="modal-fundo"></div>
+
+
+        <div class="modal-conteudo modal-habilidades-conteudo">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2>
+                        Habilidades do projeto
+                    </h2>
+
+                    <p id="nome-projeto-habilidades">
+                        Projeto
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    id="fechar-modal-habilidades"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- ADICIONAR HABILIDADE -->
+
+            <div class="adicionar-habilidade">
+
+                <h3>
+                    Adicionar habilidade
+                </h3>
+
+
+                <form id="form-habilidade-projeto">
+
+                    <div class="grade-habilidade">
+
+                        <div class="campo">
+
+                            <label for="habilidade-projeto">
+                                Habilidade
+                            </label>
+
+                            <select
+                                id="habilidade-projeto"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="nivel-requerido">
+                                Nível requerido
+                            </label>
+
+                            <select
+                                id="nivel-requerido"
+                                required
+                            >
+
+                                <option value="1">
+                                    1 - Básico
+                                </option>
+
+                                <option value="2">
+                                    2 - Básico/Intermediário
+                                </option>
+
+                                <option
+                                    value="3"
+                                    selected
+                                >
+                                    3 - Intermediário
+                                </option>
+
+                                <option value="4">
+                                    4 - Avançado
+                                </option>
+
+                                <option value="5">
+                                    5 - Especialista
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="nivel-importancia">
+                                Importância
+                            </label>
+
+                            <select
+                                id="nivel-importancia"
+                                required
+                            >
+
+                                <option value="1">
+                                    1 - Muito baixa
+                                </option>
+
+                                <option value="2">
+                                    2 - Baixa
+                                </option>
+
+                                <option
+                                    value="3"
+                                    selected
+                                >
+                                    3 - Média
+                                </option>
+
+                                <option value="4">
+                                    4 - Alta
+                                </option>
+
+                                <option value="5">
+                                    5 - Essencial
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo campo-botao-habilidade">
+
+                            <button
+                                type="submit"
+                                class="botao-principal"
+                                id="adicionar-habilidade"
+                            >
+                                + Adicionar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+                <p
+                    class="mensagem-habilidade"
+                    id="mensagem-habilidade"
+                ></p>
+
+            </div>
+
+
+            <!-- HABILIDADES CADASTRADAS -->
+
+            <div class="habilidades-cadastradas">
+
+                <div class="titulo-habilidades-cadastradas">
+
+                    <div>
+
+                        <h3>
+                            Habilidades necessárias
+                        </h3>
+
+                        <p>
+                            Competências utilizadas posteriormente no Matching.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="lista-habilidades-projeto"
+                    id="lista-habilidades-projeto"
+                >
+
+                    <div class="estado-vazio-habilidades">
+                        Carregando habilidades...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL DETALHES
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal-detalhes"
+        hidden
+    >
+
+        <div class="modal-fundo"></div>
+
+        <div class="modal-conteudo modal-detalhes-conteudo">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2>
+                        Detalhes do projeto
+                    </h2>
+
+                    <p>
+                        Informações cadastradas no sistema.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    id="fechar-modal-detalhes"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div
+                class="detalhes-projeto"
+                id="detalhes-projeto"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL EXCLUSÃO
+    ========================== -->
+
+    <div
+        class="modal"
+        id="modal-excluir"
+        hidden
+    >
+
+        <div class="modal-fundo"></div>
+
+        <div class="modal-conteudo modal-excluir-conteudo">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2>
+                        Excluir projeto
+                    </h2>
+
+                    <p>
+                        Esta ação não poderá ser desfeita.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="botao-fechar"
+                    id="fechar-modal-excluir"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <p class="texto-exclusao">
+
+                Deseja realmente excluir o projeto
+
+                <strong id="nome-projeto-excluir"></strong>?
+
+            </p>
+
+
+            <div class="modal-acoes">
+
+                <button
+                    type="button"
+                    class="botao-secundario"
+                    id="cancelar-exclusao"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    class="botao-excluir"
+                    id="confirmar-exclusao"
+                >
+                    Excluir
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="js/projetos-rh.js"></script>
+
+</body>
+
+</html>

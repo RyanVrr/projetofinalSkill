@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cursos e Certificações - SkillMatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cursos-certificacoes.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="logo-skillmatch.png" alt="Logo SkillMatch">
+            </div>
+
+            <nav class="menu-lateral">
+
+                <a href="perfil.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"></path>
+                    </svg>
+
+                    <span>Perfil</span>
+
+                </a>
+
+
+                <a href="habilidades.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-3 3-3-3 3-3z"></path>
+                    </svg>
+
+                    <span>Habilidades</span>
+
+                </a>
+
+
+                <a href="cursos-certificacoes.html" class="menu-item ativo">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 5h7a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"></path>
+                        <path d="M20 5h-7a3 3 0 0 0-3 3v11h7a3 3 0 0 1 3 3z"></path>
+                    </svg>
+
+                    <span>Cursos / Certificações</span>
+
+                </a>
+
+
+                <a href="experiencias.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+
+                    <span>Experiências</span>
+
+                </a>
+
+
+                <a href="relatorios.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 20V10"></path>
+                        <path d="M10 20V4"></path>
+                        <path d="M16 20v-7"></path>
+                        <path d="M22 20H2"></path>
+                    </svg>
+
+                    <span>Relatórios</span>
+
+                </a>
+
+
+                <a href="configuracoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21h-4v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-2.8-2.8.1-.1A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2.8-2.8.1.1A1.7 1.7 0 0 0 9 4.6 1.7 1.7 0 0 0 10 3V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 2.8 2.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1H21v4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                    </svg>
+
+                    <span>Configurações</span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <div class="conteudo">
+
+            <header class="topo">
+
+                <div class="titulo-pagina">
+
+                    <h1>Cursos e Certificações</h1>
+
+                    <p>
+                        Acompanhe seus cursos realizados e certificações obtidas.
+                    </p>
+
+                </div>
+
+
+                <div class="usuario-topo">
+
+                    <div class="avatar-pequeno">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Colaborador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <main class="cursos-container">
+
+                <!-- ABAS -->
+                <nav class="abas-perfil">
+
+                    <a href="perfil.html" class="aba">
+                        Visão Geral
+                    </a>
+
+                    <a href="habilidades.html" class="aba">
+                        Habilidades
+                    </a>
+
+                    <a href="cursos-certificacoes.html" class="aba ativa">
+                        Cursos / Certificações
+                    </a>
+
+                    <a href="experiencias.html" class="aba">
+                        Experiências
+                    </a>
+
+                </nav>
+
+
+                <!-- RESUMO -->
+                <section class="cards-resumo">
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Cursos realizados
+                        </span>
+
+                        <strong id="total-cursos">
+                            0
+                        </strong>
+
+                        <p>
+                            cursos cadastrados
+                        </p>
+
+                    </article>
+
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Cursos concluídos
+                        </span>
+
+                        <strong id="total-concluidos">
+                            0
+                        </strong>
+
+                        <p>
+                            finalizados
+                        </p>
+
+                    </article>
+
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Em andamento
+                        </span>
+
+                        <strong id="total-andamento">
+                            0
+                        </strong>
+
+                        <p>
+                            curso ativo
+                        </p>
+
+                    </article>
+
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Certificações
+                        </span>
+
+                        <strong id="total-certificacoes">
+                            0
+                        </strong>
+
+                        <p>
+                            certificações obtidas
+                        </p>
+
+                    </article>
+
+                </section>
+
+
+                <!-- CURSOS -->
+                <section class="cartao secao-lista">
+
+                    <div class="cabecalho-secao">
+
+                        <div>
+
+                            <h2>
+                                Meus Cursos
+                            </h2>
+
+                            <p>
+                                Cursos relacionados ao seu desenvolvimento profissional.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="botao-adicionar"
+                            id="abrir-modal-curso"
+                        >
+                            + Adicionar curso
+                        </button>
+
+                    </div>
+
+
+                    <div class="tabela-container">
+
+                        <table class="tabela">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Curso
+                                    </th>
+
+                                    <th>
+                                        Instituição
+                                    </th>
+
+                                    <th>
+                                        Carga horária
+                                    </th>
+
+                                    <th>
+                                        Conclusão
+                                    </th>
+
+                                    <th>
+                                        Situação
+                                    </th>
+
+                                    <th>
+                                        Ações
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="corpo-tabela-cursos">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CERTIFICAÇÕES -->
+                <section class="cartao secao-lista">
+
+                    <div class="cabecalho-secao">
+
+                        <div>
+
+                            <h2>
+                                Minhas Certificações
+                            </h2>
+
+                            <p>
+                                Certificações profissionais vinculadas ao seu perfil.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="botao-adicionar"
+                            id="abrir-modal-certificacao"
+                        >
+                            + Adicionar certificação
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="certificacoes-grid"
+                        id="lista-certificacoes"
+                    >
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         MODAL CURSO
+    ========================================= -->
+
+    <div
+        class="modal-overlay"
+        id="modal-curso"
+        aria-hidden="true"
+    >
+
+        <div class="modal">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2 id="titulo-modal-curso">
+                        Adicionar Curso
+                    </h2>
+
+                    <p>
+                        Informe os dados do curso realizado.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="modal-fechar"
+                    id="fechar-modal-curso"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-curso">
+
+                <div class="campo-modal">
+
+                    <label for="curso-nome">
+                        Curso *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="curso-nome"
+                        placeholder="Digite o nome do curso"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-modal">
+
+                    <label for="curso-instituicao">
+                        Instituição *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="curso-instituicao"
+                        placeholder="Digite a instituição"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-modal">
+
+                    <label for="curso-carga">
+                        Carga horária *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="curso-carga"
+                        placeholder="Ex.: 40h"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-modal">
+
+                    <label for="curso-fim">
+                        Data de conclusão
+                    </label>
+
+                    <input
+                        type="date"
+                        id="curso-fim"
+                    >
+
+                </div>
+
+
+                <div class="campo-modal">
+
+                    <label for="curso-situacao">
+                        Situação *
+                    </label>
+
+                    <select
+                        id="curso-situacao"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Em andamento">
+                            Em andamento
+                        </option>
+
+                        <option value="Concluído">
+                            Concluído
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="botao-cancelar"
+                        id="cancelar-curso"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="botao-confirmar"
+                        id="salvar-curso"
+                    >
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         MODAL CERTIFICAÇÃO
+    ========================================= -->
+
+    <div
+        class="modal-overlay"
+        id="modal-certificacao"
+        aria-hidden="true"
+    >
+
+        <div class="modal">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <h2 id="titulo-modal-certificacao">
+                        Adicionar Certificação
+                    </h2>
+
+                    <p>
+                        Informe os dados da sua certificação.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="modal-fechar"
+                    id="fechar-modal-certificacao"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-certificacao">
+
+                <!-- NOME -->
+                <div class="campo-modal">
+
+                    <label for="certificacao-nome">
+                        Certificação *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certificacao-nome"
+                        placeholder="Ex.: AWS Cloud Practitioner"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ÓRGÃO EMISSOR -->
+                <div class="campo-modal">
+
+                    <label for="certificacao-orgao">
+                        Órgão emissor *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certificacao-orgao"
+                        placeholder="Ex.: AWS"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DATA DE OBTENÇÃO -->
+                <div class="campo-modal">
+
+                    <label for="certificacao-obtencao">
+                        Data de obtenção *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="certificacao-obtencao"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMISSÃO -->
+                <div class="campo-modal">
+
+                    <label for="certificacao-emissao">
+                        Data de emissão *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="certificacao-emissao"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- VALIDADE -->
+                <div class="campo-modal">
+
+                    <label for="certificacao-validade">
+                        Data de validade *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="certificacao-validade"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="botao-cancelar"
+                        id="cancelar-certificacao"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="botao-confirmar"
+                        id="salvar-certificacao"
+                    >
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/supabase.js"></script>
+    <script src="js/cursos-certificacoes.js"></script>
+
+</body>
+
+</html>

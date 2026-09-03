@@ -1,0 +1,290 @@
+.relatorios-container {
+    padding: 25px 35px;
+}
+
+
+/* 
+   RESUMO
+ */
+
+.cards-resumo {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.resumo-card {
+    min-height: 115px;
+
+    padding: 18px;
+
+    background-color: white;
+
+    border: 1px solid #e2e6ea;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.resumo-card span {
+    color: #5c6675;
+
+    font-size: 13px;
+}
+
+.resumo-card strong {
+    display: block;
+
+    margin: 9px 0 4px;
+
+    font-size: 27px;
+}
+
+.resumo-card p {
+    color: #7f8997;
+
+    font-size: 12px;
+}
+
+
+/* 
+   GRID
+ */
+
+.grid-relatorios {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* 
+   CABEÇALHO
+ */
+
+.cabecalho-secao {
+    margin-bottom: 22px;
+}
+
+.cabecalho-secao h2 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+.cabecalho-secao p {
+    color: #7d8794;
+
+    font-size: 13px;
+}
+
+
+/* 
+   HABILIDADES
+ */
+
+.lista-habilidades {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.habilidade-info {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+}
+
+.habilidade-info strong {
+    font-size: 12px;
+}
+
+.barra {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background-color: #e8edf2;
+}
+
+.progresso {
+    height: 100%;
+
+    border-radius: 5px;
+}
+
+.progresso.verde {
+    background-color: #38bb70;
+}
+
+.progresso.azul {
+    background-color: #2677de;
+}
+
+.progresso.cinza {
+    background-color: #8793a2;
+}
+
+.nivel-90 {
+    width: 90%;
+}
+
+.nivel-85 {
+    width: 85%;
+}
+
+.nivel-70 {
+    width: 70%;
+}
+
+.nivel-60 {
+    width: 60%;
+}
+
+.nivel-40 {
+    width: 40%;
+}
+
+
+/* 
+   DESENVOLVIMENTO
+ */
+
+.desenvolvimento-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.desenvolvimento-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #e8ebef;
+}
+
+.desenvolvimento-item:last-child {
+    border-bottom: none;
+}
+
+.desenvolvimento-item div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.desenvolvimento-item span {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.desenvolvimento-item small {
+    color: #89929e;
+
+    font-size: 11px;
+}
+
+.desenvolvimento-item strong {
+    font-size: 22px;
+
+    color: #1671e8;
+}
+
+
+/* 
+   RESUMO PROFISSIONAL
+ */
+
+.resumo-profissional-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.resumo-profissional-grid div {
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background-color: #f7f9fb;
+
+    border: 1px solid #e4e8ed;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.resumo-profissional-grid span {
+    color: #7b8491;
+
+    font-size: 12px;
+}
+
+.resumo-profissional-grid strong {
+    font-size: 14px;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 1100px) {
+
+    .cards-resumo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-relatorios {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-profissional-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .relatorios-container {
+        padding: 20px;
+    }
+
+    .cards-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-profissional-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil - SkillMatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="logo-skillmatch.png" alt="Logo SkillMatch">
+            </div>
+
+            <nav class="menu-lateral">
+
+                <a href="perfil.html" class="menu-item ativo">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"></path>
+                    </svg>
+
+                    <span>Perfil</span>
+
+                </a>
+
+                <a href="habilidades.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-3 3-3-3 3-3z"></path>
+                    </svg>
+
+                    <span>Habilidades</span>
+
+                </a>
+
+                <a href="cursos-certificacoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 5h7a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"></path>
+                        <path d="M20 5h-7a3 3 0 0 0-3 3v11h7a3 3 0 0 1 3 3z"></path>
+                    </svg>
+
+                    <span>Cursos / Certificações</span>
+
+                </a>
+
+                <a href="experiencias.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+
+                    <span>Experiências</span>
+
+                </a>
+
+                <a href="relatorios.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 20V10"></path>
+                        <path d="M10 20V4"></path>
+                        <path d="M16 20v-7"></path>
+                        <path d="M22 20H2"></path>
+                    </svg>
+
+                    <span>Relatórios</span>
+
+                </a>
+
+                <a href="configuracoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21h-4v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-2.8-2.8.1-.1A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2.8-2.8.1.1A1.7 1.7 0 0 0 9 4.6 1.7 1.7 0 0 0 10 3V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 2.8 2.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1H21v4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                    </svg>
+
+                    <span>Configurações</span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="conteudo">
+
+            <!-- TOPO -->
+            <header class="topo">
+
+                <div class="titulo-pagina">
+
+                    <h1>Meu Perfil</h1>
+
+                    <p>
+                        Visualize suas informações profissionais.
+                    </p>
+
+                </div>
+
+
+                <div class="usuario-topo">
+
+                    <div class="avatar-pequeno">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Colaborador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="perfil-container">
+
+                <!-- PERFIL ESQUERDO -->
+                <aside class="cartao perfil-pessoal">
+
+                    <!-- FOTO -->
+                    <div class="foto-perfil-container">
+
+                        <div
+                            class="foto-placeholder"
+                            id="foto-placeholder"
+                        >
+                            👤
+                        </div>
+
+                        <img
+                            id="foto-perfil"
+                            class="foto-imagem"
+                            alt=""
+                            hidden
+                        >
+
+                        <label
+                            for="input-foto"
+                            class="botao-foto"
+                            title="Alterar foto"
+                        >
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M14.5 4l1.5 2H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l1.5-2h5z"></path>
+
+                                <circle
+                                    cx="12"
+                                    cy="13"
+                                    r="4"
+                                ></circle>
+
+                            </svg>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="input-foto"
+                            accept="image/png, image/jpeg, image/webp"
+                            hidden
+                        >
+
+                    </div>
+
+
+                    <h2 id="perfil-nome">
+                        Carregando...
+                    </h2>
+
+                    <p
+                        class="cargo"
+                        id="perfil-cargo"
+                    >
+                        Carregando...
+                    </p>
+
+                    <p
+                        class="setor"
+                        id="perfil-setor"
+                    >
+                        Carregando...
+                    </p>
+
+                    <span
+                        class="status"
+                        id="perfil-status"
+                    >
+                        -
+                    </span>
+
+
+                    <div class="dados-pessoais">
+
+                        <div>
+
+                            <span>Matrícula</span>
+
+                            <strong id="perfil-matricula">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Contato</span>
+
+                            <strong id="perfil-contato">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>Data de admissão</span>
+
+                            <strong id="perfil-admissao">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- COLUNA DIREITA -->
+                <div class="perfil-detalhes">
+
+                    <nav class="abas-perfil">
+
+                        <a
+                            href="perfil.html"
+                            class="aba ativa"
+                        >
+                            Visão Geral
+                        </a>
+
+                        <a
+                            href="habilidades.html"
+                            class="aba"
+                        >
+                            Habilidades
+                        </a>
+
+                        <a
+                            href="cursos-certificacoes.html"
+                            class="aba"
+                        >
+                            Cursos / Certificações
+                        </a>
+
+                        <a
+                            href="experiencias.html"
+                            class="aba"
+                        >
+                            Experiências
+                        </a>
+
+                    </nav>
+
+
+                    <!-- RESUMO -->
+                    <section class="cartao">
+
+                        <div class="cabecalho-card">
+
+                            <div>
+
+                                <h2>
+                                    Resumo Profissional
+                                </h2>
+
+                                <p>
+                                    Visão geral das suas informações cadastradas.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="cards-resumo">
+
+                            <div class="resumo-card">
+
+                                <span>
+                                    Habilidades
+                                </span>
+
+                                <strong>8</strong>
+
+                                <p>
+                                    Cadastradas
+                                </p>
+
+                            </div>
+
+
+                            <div class="resumo-card">
+
+                                <span>
+                                    Cursos
+                                </span>
+
+                                <strong>4</strong>
+
+                                <p>
+                                    Realizados
+                                </p>
+
+                            </div>
+
+
+                            <div class="resumo-card">
+
+                                <span>
+                                    Certificações
+                                </span>
+
+                                <strong>3</strong>
+
+                                <p>
+                                    Obtidas
+                                </p>
+
+                            </div>
+
+
+                            <div class="resumo-card">
+
+                                <span>
+                                    Experiências
+                                </span>
+
+                                <strong>5</strong>
+
+                                <p>
+                                    Registradas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PARTE INFERIOR -->
+                    <div class="grid-inferior">
+
+                        <section class="cartao">
+
+                            <h2>
+                                Principais Habilidades
+                            </h2>
+
+
+                            <div class="habilidade">
+
+                                <div class="habilidade-info">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                    <strong>
+                                        90%
+                                    </strong>
+
+                                </div>
+
+                                <div class="barra">
+                                    <div class="progresso azul nivel-90"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="habilidade">
+
+                                <div class="habilidade-info">
+
+                                    <span>
+                                        Banco de Dados
+                                    </span>
+
+                                    <strong>
+                                        85%
+                                    </strong>
+
+                                </div>
+
+                                <div class="barra">
+                                    <div class="progresso verde nivel-85"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="habilidade">
+
+                                <div class="habilidade-info">
+
+                                    <span>
+                                        Python
+                                    </span>
+
+                                    <strong>
+                                        70%
+                                    </strong>
+
+                                </div>
+
+                                <div class="barra">
+                                    <div class="progresso azul nivel-70"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="habilidade">
+
+                                <div class="habilidade-info">
+
+                                    <span>
+                                        Trabalho em equipe
+                                    </span>
+
+                                    <strong>
+                                        90%
+                                    </strong>
+
+                                </div>
+
+                                <div class="barra">
+                                    <div class="progresso verde nivel-90"></div>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- INFORMAÇÕES PROFISSIONAIS -->
+                        <section class="cartao">
+
+                            <h2>
+                                Informações Profissionais
+                            </h2>
+
+                            <div class="informacoes">
+
+                                <div>
+
+                                    <span>
+                                        Cargo
+                                    </span>
+
+                                    <strong id="info-cargo">
+                                        -
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Setor
+                                    </span>
+
+                                    <strong id="info-setor">
+                                        -
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Status
+                                    </span>
+
+                                    <strong id="info-status">
+                                        -
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Admissão
+                                    </span>
+
+                                    <strong id="info-admissao">
+                                        -
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/supabase.js"></script>
+    <script src="js/perfil.js"></script>
+
+</body>
+
+</html>

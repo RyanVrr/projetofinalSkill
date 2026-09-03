@@ -1,0 +1,505 @@
+.relatorios-pagina {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* 
+   CABEÇALHO
+ */
+
+.cabecalho-relatorios h2 {
+    margin-top: 4px;
+    margin-bottom: 5px;
+
+    color: #172033;
+
+    font-size: 26px;
+}
+
+.cabecalho-relatorios p {
+    color: #77808f;
+
+    font-size: 14px;
+}
+
+
+/* 
+   CARDS
+ */
+
+.cards-relatorios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+}
+
+.card-indicador {
+    min-height: 115px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 17px;
+
+    border: 1px solid #e0e5eb;
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.card-indicador span {
+    color: #5c6675;
+
+    font-size: 13px;
+}
+
+.card-indicador strong {
+    margin: 8px 0 4px;
+
+    color: #172033;
+
+    font-size: 28px;
+}
+
+.card-indicador p {
+    color: #7f8997;
+
+    font-size: 12px;
+}
+
+
+/* 
+   GRID RELATÓRIOS
+ */
+
+.grade-relatorios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 16px;
+}
+
+.relatorio-painel {
+    padding: 22px;
+}
+
+.painel-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.painel-cabecalho h3 {
+    color: #172033;
+
+    font-size: 16px;
+}
+
+.painel-cabecalho p {
+    margin-top: 4px;
+
+    color: #818a97;
+
+    font-size: 11px;
+}
+
+
+/* 
+   RANKINGS
+ */
+
+.lista-ranking {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 11px 12px;
+
+    border: 1px solid #e6eaee;
+    border-radius: 8px;
+
+    background-color: #fafbfc;
+}
+
+.ranking-info {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.ranking-posicao {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background-color: #e8f1fd;
+
+    color: #1675e8;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ranking-texto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.ranking-texto strong {
+    color: #172033;
+
+    font-size: 12px;
+}
+
+.ranking-texto span {
+    color: #818a97;
+
+    font-size: 10px;
+}
+
+.ranking-valor {
+    color: #1675e8;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* 
+   SETORES
+ */
+
+.lista-barras {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.barra-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.barra-topo {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.barra-topo span {
+    color: #525c6b;
+
+    font-size: 11px;
+}
+
+.barra-topo strong {
+    color: #172033;
+
+    font-size: 11px;
+}
+
+.barra-fundo {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #e9edf2;
+}
+
+.barra-progresso {
+    height: 100%;
+
+    border-radius: 10px;
+
+    background-color: #2677de;
+}
+
+
+/* 
+   STATUS PROJETOS
+ */
+
+.status-projetos-relatorio {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.status-relatorio-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+
+    border: 1px solid #e6eaee;
+    border-radius: 8px;
+
+    background-color: #fafbfc;
+}
+
+.status-relatorio-item > div {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.status-relatorio-item span {
+    color: #525c6b;
+
+    font-size: 12px;
+}
+
+.status-relatorio-item strong {
+    color: #172033;
+
+    font-size: 14px;
+}
+
+.bolinha-status {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+}
+
+.bolinha-status.ativo {
+    background-color: #219653;
+}
+
+.bolinha-status.planejado {
+    background-color: #1675e8;
+}
+
+.bolinha-status.concluido {
+    background-color: #8a929e;
+}
+
+
+/* 
+   TABELA
+ */
+
+.tabela-relatorio-painel {
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.tabela-relatorio-painel .painel-cabecalho {
+    margin: 0;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #e2e6ea;
+}
+
+#pesquisa-relatorio {
+    width: 250px;
+    min-height: 39px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dfe4e9;
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #172033;
+
+    font-size: 12px;
+}
+
+#pesquisa-relatorio:focus {
+    border-color: #1675e8;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22, 117, 232, 0.08);
+}
+
+.tabela-relatorio {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabela-relatorio th {
+    padding: 13px 16px;
+
+    border-bottom: 1px solid #e2e6ea;
+
+    background-color: #f8fafc;
+
+    color: #6d7683;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-align: left;
+
+    text-transform: uppercase;
+}
+
+.tabela-relatorio td {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #edf0f3;
+
+    color: #525c6b;
+
+    font-size: 12px;
+}
+
+.tabela-relatorio tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.colaborador-relatorio {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.colaborador-relatorio strong {
+    color: #172033;
+
+    font-size: 12px;
+}
+
+.colaborador-relatorio span {
+    color: #818a97;
+
+    font-size: 10px;
+}
+
+.status-colaborador-relatorio {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.status-colaborador-relatorio.ativo {
+    background-color: #dcf8e5;
+
+    color: #219653;
+}
+
+.status-colaborador-relatorio.inativo {
+    background-color: #f1f2f4;
+
+    color: #6e7784;
+}
+
+
+/* 
+   ESTADO VAZIO
+ */
+
+.estado-vazio {
+    padding: 25px;
+
+    border: 1px dashed #dfe4e9;
+    border-radius: 8px;
+
+    color: #818a97;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 1100px) {
+
+    .cards-relatorios {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .grade-relatorios {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .cards-relatorios {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #pesquisa-relatorio {
+        width: 100%;
+    }
+
+}

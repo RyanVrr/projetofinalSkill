@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Relatórios | SkillMatch</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard-rh.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/relatorios-rh.css"
+    >
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../logo-skillmatch.png"
+                    alt="SkillMatch"
+                >
+
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="colaboradores-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">♙</span>
+                    <span>Colaboradores</span>
+                </a>
+
+                <a
+                    href="projetos-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">◫</span>
+                    <span>Projetos</span>
+                </a>
+
+                <a
+                    href="matching-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">✦</span>
+                    <span>Matching</span>
+                </a>
+
+                <a
+                    href="relatorios-rh.html"
+                    class="menu-item ativo"
+                >
+                    <span class="menu-icone">▤</span>
+                    <span>Relatórios</span>
+                </a>
+
+                <a
+                    href="configuracoes-rh.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⚙</span>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <main class="conteudo">
+
+            <header class="topo">
+
+                <div class="topo-titulo">
+
+                    <h1>
+                        Relatórios
+                    </h1>
+
+                    <p>
+                        Acompanhe indicadores de colaboradores, habilidades e projetos.
+                    </p>
+
+                </div>
+
+                <div class="usuario-topo">
+
+                    <div
+                        class="usuario-avatar"
+                        id="usuario-avatar"
+                    >
+                        RH
+                    </div>
+
+                    <div class="usuario-info">
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Recursos Humanos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="pagina relatorios-pagina">
+
+                <div class="cabecalho-relatorios">
+
+                    <div>
+
+                        <span class="titulo-menor">
+                            VISÃO GERAL
+                        </span>
+
+                        <h2>
+                            Indicadores da organização
+                        </h2>
+
+                        <p>
+                            Informações geradas a partir dos dados cadastrados no SkillMatch.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARDS -->
+
+                <div class="cards-relatorios">
+
+                    <div class="card-indicador">
+
+                        <span>
+                            Colaboradores
+                        </span>
+
+                        <strong id="rel-total-colaboradores">
+                            0
+                        </strong>
+
+                        <p>
+                            funcionários cadastrados
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-indicador">
+
+                        <span>
+                            Habilidades
+                        </span>
+
+                        <strong id="rel-total-habilidades">
+                            0
+                        </strong>
+
+                        <p>
+                            competências disponíveis
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-indicador">
+
+                        <span>
+                            Projetos ativos
+                        </span>
+
+                        <strong id="rel-projetos-ativos">
+                            0
+                        </strong>
+
+                        <p>
+                            em andamento
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-indicador">
+
+                        <span>
+                            Projetos concluídos
+                        </span>
+
+                        <strong id="rel-projetos-concluidos">
+                            0
+                        </strong>
+
+                        <p>
+                            finalizados
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GRID -->
+
+                <div class="grade-relatorios">
+
+                    <!-- HABILIDADES MAIS COMUNS -->
+
+                    <section class="painel relatorio-painel">
+
+                        <div class="painel-cabecalho">
+
+                            <div>
+
+                                <h3>
+                                    Habilidades mais comuns
+                                </h3>
+
+                                <p>
+                                    Competências mais presentes entre os colaboradores.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="lista-ranking"
+                            id="ranking-habilidades"
+                        >
+
+                            <div class="estado-vazio">
+                                Carregando...
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- COLABORADORES COM MAIS HABILIDADES -->
+
+                    <section class="painel relatorio-painel">
+
+                        <div class="painel-cabecalho">
+
+                            <div>
+
+                                <h3>
+                                    Colaboradores com mais habilidades
+                                </h3>
+
+                                <p>
+                                    Profissionais com maior quantidade de competências cadastradas.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="lista-ranking"
+                            id="ranking-colaboradores"
+                        >
+
+                            <div class="estado-vazio">
+                                Carregando...
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- DISTRIBUIÇÃO POR SETOR -->
+
+                    <section class="painel relatorio-painel">
+
+                        <div class="painel-cabecalho">
+
+                            <div>
+
+                                <h3>
+                                    Colaboradores por setor
+                                </h3>
+
+                                <p>
+                                    Distribuição dos funcionários entre os setores.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="lista-barras"
+                            id="distribuicao-setores"
+                        >
+
+                            <div class="estado-vazio">
+                                Carregando...
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PROJETOS -->
+
+                    <section class="painel relatorio-painel">
+
+                        <div class="painel-cabecalho">
+
+                            <div>
+
+                                <h3>
+                                    Situação dos projetos
+                                </h3>
+
+                                <p>
+                                    Distribuição entre projetos ativos, planejados e concluídos.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="status-projetos-relatorio">
+
+                            <div class="status-relatorio-item">
+
+                                <div>
+
+                                    <span class="bolinha-status ativo"></span>
+
+                                    <span>
+                                        Ativos
+                                    </span>
+
+                                </div>
+
+                                <strong id="rel-status-ativos">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="status-relatorio-item">
+
+                                <div>
+
+                                    <span class="bolinha-status planejado"></span>
+
+                                    <span>
+                                        Planejados
+                                    </span>
+
+                                </div>
+
+                                <strong id="rel-status-planejados">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="status-relatorio-item">
+
+                                <div>
+
+                                    <span class="bolinha-status concluido"></span>
+
+                                    <span>
+                                        Concluídos
+                                    </span>
+
+                                </div>
+
+                                <strong id="rel-status-concluidos">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- TABELA -->
+
+                <section class="painel tabela-relatorio-painel">
+
+                    <div class="painel-cabecalho">
+
+                        <div>
+
+                            <h3>
+                                Resumo dos colaboradores
+                            </h3>
+
+                            <p>
+                                Visão consolidada dos profissionais cadastrados.
+                            </p>
+
+                        </div>
+
+                        <input
+                            type="text"
+                            id="pesquisa-relatorio"
+                            placeholder="Pesquisar colaborador..."
+                        >
+
+                    </div>
+
+
+                    <div class="tabela-container">
+
+                        <table class="tabela-relatorio">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Colaborador
+                                    </th>
+
+                                    <th>
+                                        Cargo
+                                    </th>
+
+                                    <th>
+                                        Setor
+                                    </th>
+
+                                    <th>
+                                        Habilidades
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="corpo-relatorio-colaboradores">
+
+                                <tr>
+
+                                    <td
+                                        colspan="5"
+                                        class="tabela-vazia"
+                                    >
+                                        Carregando dados...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="js/relatorios-rh.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meus Relatórios - SkillMatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/relatorios.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="logo-skillmatch.png" alt="Logo SkillMatch">
+            </div>
+
+            <nav class="menu-lateral">
+
+                <a href="perfil.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"></path>
+                    </svg>
+
+                    <span>Perfil</span>
+
+                </a>
+
+
+                <a href="habilidades.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-3 3-3-3 3-3z"></path>
+                    </svg>
+
+                    <span>Habilidades</span>
+
+                </a>
+
+
+                <a href="cursos-certificacoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 5h7a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"></path>
+                        <path d="M20 5h-7a3 3 0 0 0-3 3v11h7a3 3 0 0 1 3 3z"></path>
+                    </svg>
+
+                    <span>Cursos / Certificações</span>
+
+                </a>
+
+
+                <a href="experiencias.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+
+                    <span>Experiências</span>
+
+                </a>
+
+
+                <a href="relatorios.html" class="menu-item ativo">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <path d="M4 20V10"></path>
+                        <path d="M10 20V4"></path>
+                        <path d="M16 20v-7"></path>
+                        <path d="M22 20H2"></path>
+                    </svg>
+
+                    <span>Relatórios</span>
+
+                </a>
+
+
+                <a href="configuracoes.html" class="menu-item">
+
+                    <svg class="menu-icone" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21h-4v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-2.8-2.8.1-.1A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2.8-2.8.1.1A1.7 1.7 0 0 0 9 4.6 1.7 1.7 0 0 0 10 3V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 2.8 2.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1H21v4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+                    </svg>
+
+                    <span>Configurações</span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="conteudo">
+
+            <header class="topo">
+
+                <div class="titulo-pagina">
+
+                    <h1>Meus Relatórios</h1>
+
+                    <p>
+                        Acompanhe sua evolução profissional e o desenvolvimento das suas competências.
+                    </p>
+
+                </div>
+
+
+                <div class="usuario-topo">
+
+                    <div class="avatar-pequeno">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <strong id="topo-nome">
+                            Carregando...
+                        </strong>
+
+                        <span>
+                            Colaborador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <main class="relatorios-container">
+
+
+                <!-- =====================================
+                     RESUMO
+                ====================================== -->
+
+                <section class="cards-resumo">
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Habilidades
+                        </span>
+
+                        <strong id="total-habilidades">
+                            0
+                        </strong>
+
+                        <p>
+                            competências cadastradas
+                        </p>
+
+                    </article>
+
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Cursos concluídos
+                        </span>
+
+                        <strong id="total-cursos-concluidos">
+                            0
+                        </strong>
+
+                        <p>
+                            cursos finalizados
+                        </p>
+
+                    </article>
+
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Certificações
+                        </span>
+
+                        <strong id="total-certificacoes">
+                            0
+                        </strong>
+
+                        <p>
+                            certificações cadastradas
+                        </p>
+
+                    </article>
+
+
+                    <article class="resumo-card">
+
+                        <span>
+                            Experiências
+                        </span>
+
+                        <strong id="total-experiencias">
+                            0
+                        </strong>
+
+                        <p>
+                            experiências registradas
+                        </p>
+
+                    </article>
+
+                </section>
+
+
+                <div class="grid-relatorios">
+
+
+                    <!-- =====================================
+                         EVOLUÇÃO DAS HABILIDADES
+                    ====================================== -->
+
+                    <section class="cartao">
+
+                        <div class="cabecalho-secao">
+
+                            <div>
+
+                                <h2>
+                                    Evolução das Habilidades
+                                </h2>
+
+                                <p>
+                                    Visão resumida dos seus principais níveis de conhecimento.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="lista-habilidades"
+                            id="lista-habilidades-relatorio"
+                        >
+
+                            <p>
+                                Carregando habilidades...
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================================
+                         DESENVOLVIMENTO PROFISSIONAL
+                    ====================================== -->
+
+                    <section class="cartao">
+
+                        <div class="cabecalho-secao">
+
+                            <div>
+
+                                <h2>
+                                    Desenvolvimento Profissional
+                                </h2>
+
+                                <p>
+                                    Resumo das atividades registradas no seu perfil.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="desenvolvimento-lista">
+
+
+                            <div class="desenvolvimento-item">
+
+                                <div>
+
+                                    <span>
+                                        Cursos concluídos
+                                    </span>
+
+                                    <small>
+                                        Formações finalizadas
+                                    </small>
+
+                                </div>
+
+                                <strong id="desenvolvimento-cursos-concluidos">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desenvolvimento-item">
+
+                                <div>
+
+                                    <span>
+                                        Cursos em andamento
+                                    </span>
+
+                                    <small>
+                                        Formações atuais
+                                    </small>
+
+                                </div>
+
+                                <strong id="desenvolvimento-cursos-andamento">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desenvolvimento-item">
+
+                                <div>
+
+                                    <span>
+                                        Certificações
+                                    </span>
+
+                                    <small>
+                                        Certificações cadastradas
+                                    </small>
+
+                                </div>
+
+                                <strong id="desenvolvimento-certificacoes">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desenvolvimento-item">
+
+                                <div>
+
+                                    <span>
+                                        Experiências registradas
+                                    </span>
+
+                                    <small>
+                                        Histórico profissional
+                                    </small>
+
+                                </div>
+
+                                <strong id="desenvolvimento-experiencias">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =====================================
+                     RESUMO PROFISSIONAL
+                ====================================== -->
+
+                <section class="cartao resumo-profissional">
+
+                    <div class="cabecalho-secao">
+
+                        <div>
+
+                            <h2>
+                                Resumo Profissional
+                            </h2>
+
+                            <p>
+                                Síntese das principais informações do seu perfil.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="resumo-profissional-grid">
+
+
+                        <div>
+
+                            <span>
+                                Principal habilidade
+                            </span>
+
+                            <strong id="principal-habilidade">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Nível mais alto
+                            </span>
+
+                            <strong id="nivel-mais-alto">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Tempo de experiência
+                            </span>
+
+                            <strong id="tempo-experiencia">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Última atualização
+                            </span>
+
+                            <strong id="ultima-atualizacao">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPABASE -->
+    <script src="js/supabase.js"></script>
+
+    <!-- RELATÓRIOS -->
+    <script src="js/relatorios.js"></script>
+
+</body>
+
+</html>

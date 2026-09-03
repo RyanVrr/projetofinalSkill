@@ -1,0 +1,672 @@
+/* 
+   PÁGINA
+ */
+
+.matching-pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.matching-cabecalho h2 {
+    margin-top: 4px;
+    margin-bottom: 5px;
+
+    color: #172033;
+
+    font-size: 26px;
+}
+
+.matching-cabecalho p {
+    color: #77808f;
+
+    font-size: 14px;
+}
+
+
+/* 
+   CHAT CARD
+ */
+
+.chat-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 650px;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 12px;
+
+    background-color: white;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.03);
+
+    overflow: hidden;
+}
+
+
+/* 
+   TOPO CHAT
+ */
+
+.chat-topo {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 22px;
+
+    border-bottom: 1px solid #e4e7eb;
+}
+
+.assistente-info {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.assistente-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1675e8,
+            #10b5db
+        );
+
+    color: white;
+
+    font-size: 19px;
+}
+
+.assistente-info > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.assistente-info strong {
+    color: #172033;
+
+    font-size: 14px;
+}
+
+.assistente-info span {
+    color: #818a97;
+
+    font-size: 11px;
+}
+
+.status-assistente {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5c6675;
+
+    font-size: 11px;
+}
+
+.status-ponto {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: #219653;
+}
+
+
+/* 
+   SELETOR DE PROJETO
+ */
+
+.seletor-projeto-area {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 22px;
+
+    border-bottom: 1px solid #edf0f3;
+
+    background-color: #f8fafc;
+}
+
+.seletor-projeto-area label {
+    flex-shrink: 0;
+
+    color: #525c6b;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.seletor-projeto-area select {
+    width: min(430px, 100%);
+
+    min-height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dfe4e9;
+    border-radius: 8px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #172033;
+
+    font-size: 12px;
+}
+
+.seletor-projeto-area select:focus {
+    border-color: #1675e8;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22, 117, 232, 0.08);
+}
+
+
+/* 
+   MENSAGENS
+ */
+
+.chat-mensagens {
+    flex: 1;
+
+    min-height: 390px;
+    max-height: 570px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    padding: 25px 25px 35px;
+
+    overflow-y: auto;
+
+    background-color: #fbfcfd;
+}
+
+.mensagem {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.mensagem-usuario {
+    justify-content: flex-end;
+}
+
+.mensagem-avatar {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1675e8,
+            #10b5db
+        );
+
+    color: white;
+
+    font-size: 13px;
+}
+
+.mensagem-conteudo {
+    max-width: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.mensagem-usuario .mensagem-conteudo {
+    align-items: flex-end;
+}
+
+.mensagem-remetente {
+    color: #818a97;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.balao {
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+.balao p {
+    margin: 0;
+}
+
+.balao-ia {
+    border: 1px solid #e2e6ea;
+
+    border-top-left-radius: 3px;
+
+    background-color: white;
+
+    color: #394352;
+}
+
+.balao-usuario {
+    border-top-right-radius: 3px;
+
+    background-color: #1675e8;
+
+    color: white;
+}
+
+
+/* 
+   DIGITANDO
+ */
+
+.digitando {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.digitando span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background-color: #9aa3ad;
+}
+
+
+/* 
+   RESULTADOS MATCHING
+ */
+
+.resultado-introducao {
+    margin-bottom: 13px;
+}
+
+.lista-candidatos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 13px;
+}
+
+.candidato-card {
+    padding: 13px;
+
+    border: 1px solid #e0e5eb;
+    border-radius: 9px;
+
+    background-color: #f9fafb;
+}
+
+.candidato-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 8px;
+}
+
+.candidato-identidade {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.candidato-identidade strong {
+    color: #172033;
+
+    font-size: 13px;
+}
+
+.candidato-identidade span {
+    color: #818a97;
+
+    font-size: 10px;
+}
+
+.compatibilidade {
+    flex-shrink: 0;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background-color: #dcf8e5;
+
+    color: #219653;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.compatibilidade.media {
+    background-color: #fff3d6;
+
+    color: #a36b00;
+}
+
+.compatibilidade.baixa {
+    background-color: #f3f4f6;
+
+    color: #6e7784;
+}
+
+.candidato-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.tag-habilidade {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+    background-color: #e8f1fd;
+
+    color: #1675e8;
+
+    font-size: 10px;
+}
+
+.tag-habilidade.falta {
+    background-color: #fdecec;
+
+    color: #c83c3c;
+}
+
+.tag-habilidade.parcial {
+    background-color: #fff3d6;
+
+    color: #9a6908;
+}
+
+
+/* 
+   REQUISITOS
+ */
+
+.lista-requisitos-chat {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.requisito-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 9px 11px;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 7px;
+
+    background-color: #f9fafb;
+}
+
+.requisito-chat strong {
+    color: #172033;
+
+    font-size: 11px;
+}
+
+.requisito-chat span {
+    color: #6d7683;
+
+    font-size: 10px;
+}
+
+
+/* 
+   SUGESTÕES
+ */
+
+.sugestoes-chat {
+    padding: 13px 22px;
+
+    border-top: 1px solid #edf0f3;
+
+    background-color: white;
+}
+
+.sugestoes-chat > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #818a97;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+}
+
+.sugestoes-botoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.botao-sugestao {
+    min-height: 31px;
+
+    padding: 0 11px;
+
+    border: 1px solid #dce5ef;
+    border-radius: 7px;
+
+    background-color: #f8fafc;
+
+    color: #456078;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-sugestao:hover {
+    border-color: #1675e8;
+
+    color: #1675e8;
+
+    background-color: white;
+}
+
+
+/* 
+   FORMULÁRIO
+ */
+
+.chat-form {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 10px;
+
+    padding: 15px 22px 20px;
+
+    border-top: 1px solid #edf0f3;
+
+    background-color: white;
+}
+
+.chat-form textarea {
+    flex: 1;
+
+    min-height: 44px;
+    max-height: 120px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #dfe4e9;
+    border-radius: 9px;
+
+    outline: none;
+
+    resize: none;
+
+    color: #172033;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+.chat-form textarea:focus {
+    border-color: #1675e8;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22, 117, 232, 0.08);
+}
+
+.botao-enviar {
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1675e8,
+            #10b5db
+        );
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.botao-enviar:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* 
+   RESPONSIVIDADE
+ */
+
+@media (max-width: 850px) {
+
+    .seletor-projeto-area {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .seletor-projeto-area select {
+        width: 100%;
+    }
+
+    .mensagem-conteudo {
+        max-width: 90%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .chat-mensagens {
+        padding: 18px 14px 25px;
+    }
+
+    .chat-topo,
+    .seletor-projeto-area,
+    .sugestoes-chat,
+    .chat-form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .chat-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .botao-enviar {
+        width: 100%;
+    }
+
+    .candidato-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
